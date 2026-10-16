@@ -539,7 +539,7 @@ h1 span { color: var(--tang); }
 .pc .photo { box-shadow: 6px 6px 0 var(--shadow); border-radius: 22px; }
 .pc h3 { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 17px; letter-spacing: -0.02em; margin: 16px 0 4px; }
 .pc p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
-.likes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 64px 0 0; padding: 0; }
+.likes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 64px 0 0; padding: 0; }
 .like { border: 2px solid var(--line); border-radius: 20px; padding: 22px; background: var(--lc); color: var(--pop-ink); transition: transform .2s; min-width: 0; }
 .like:hover { transform: translateY(-4px) rotate(1deg); }
 .like svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; display: block; margin-bottom: 10px; }
@@ -581,7 +581,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .likes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .likes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .b-ipt, .b-ap { grid-column: span 12; }
 }
 @media (max-width: 860px) {
@@ -603,6 +603,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .pipe .io { grid-column: 1 / -1; justify-self: center; margin-top: 0; max-width: none; }
   .rail, .tdot, .loop { display: none; }
   .notes { grid-template-columns: minmax(0, 1fr); }
+  .likes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
@@ -1132,7 +1133,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </li>
         <li class="like" style="--lc: var(--tang-soft)">
           <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M18 36 C10 36 7 46 13 51 C19 56 31 55 35 48 C38 43 37 37 32 35 C34 29 29 25 24 27 C19 29 21 34 18 36 Z"></path><path d="M30 34 L50 12"></path><path d="M48 9 L54 5 L57 9 L52 14 Z"></path><circle cx="23" cy="43" r="3.5"></circle></svg>
-          <b>acoustic strings</b><p>figuring out guitar progressions (currently stuck on mere humnava and local train chords).</p>
+          <b>electric &amp; acoustic</b><p>i play electric and acoustic guitar, and i know a few good songs to jam.</p>
         </li>
         <li class="like" style="--lc: var(--mint-soft)">
           <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 50 L36 20 L42 24.5 L21 54 Z"></path><path d="M36 20 L41 12 L46 15.5 L42 24.5"></path><circle cx="47" cy="44" r="6"></circle><path d="M42.5 41 C45 43 46 46 45.5 49.5"></path></svg>
@@ -1143,8 +1144,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <b>the kitchen lab</b><p>treating recipes like r&amp;d—dialling in lemon malai chicken or testing parle-g tiramisu ratios.</p>
         </li>
         <li class="like" style="--lc: var(--sky)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M4 48 L22 20 L32 34 L40 24 L56 48 Z"></path><circle cx="44" cy="12" r="5"></circle></svg>
-          <b>mythology, history &amp; two wheels</b><p>old empires, recurring human patterns, and mountain corners in himachal.</p>
+          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 22 L30 9 L52 22 Z"></path><path d="M14 22 V46 M24 22 V46 M36 22 V46 M46 22 V46"></path><path d="M7 50 H53"></path></svg>
+          <b>mythology &amp; history</b><p>epics, old empires, and the patterns humans keep repeating across centuries.</p>
+        </li>
+        <li class="like" style="--lc: var(--sun)">
+          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M20 54 L27 22 M40 54 L33 22"></path><path d="M30 52 V47 M30 40 V35 M30 29 V26"></path><path d="M3 30 L15 16 L24 26 L32 18 L42 28"></path><circle cx="49" cy="11" r="5"></circle></svg>
+          <b>road trips</b><p>always up for a long drive. ladakh in the thar is still the best one.</p>
+        </li>
+        <li class="like" style="--lc: var(--tang-soft)">
+          <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="20" cy="38" r="13"></circle><path d="M20 31 L26.5 35.5 L24 43 L16 43 L13.5 35.5 Z"></path><path d="M40 52 V10"></path><path d="M40 10 H56 V26 H40"></path><path d="M48 10 V26 M40 18 H56"></path></svg>
+          <b>football &amp; f1</b><p>the newer sports i've gotten hooked on, on top of cricket.</p>
+        </li>
+        <li class="like" style="--lc: var(--mint-soft)">
+          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M13 10 C23 3 38 7 40 19 C42 30 34 38 24 38 C14 38 7 30 8 22 C8 16 10 12 13 10 Z"></path><path d="M24 38 L22 55"></path><circle cx="47" cy="45" r="7"></circle><circle cx="45" cy="43" r="1"></circle><circle cx="49.5" cy="46.5" r="1"></circle></svg>
+          <b>pickleball</b><p>i play it too. up for a duel?</p>
         </li>
       </ul>
     </div>
