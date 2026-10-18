@@ -1292,7 +1292,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     });
     barts.forEach(function (a) {
       var on = +a.dataset.k === k;
-      a.hidden = !on;
+      if (on) a.removeAttribute('hidden'); else a.setAttribute('hidden', '');
       a.classList.remove('on');
       if (on) { void a.getBoundingClientRect(); a.classList.add('on'); }
     });
