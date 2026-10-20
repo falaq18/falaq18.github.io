@@ -2,669 +2,88 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://falaq18.github.io/">
+<meta name="theme-color" content="#f4f5fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a1024" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Falaq Chopra">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://falaq18.github.io/">
+<meta property="og:site_name" content="Falaq Chopra">
 <meta property="og:title" content="Falaq Chopra">
-<meta property="og:description" content="analyst, operator and builder from gurgaon. the things i've done, built, and keep thinking about.">
+<meta property="og:description" content="analyst, operator and builder from gurgaon. the setlist so far, the things i've built, and how i think.">
 <meta property="og:image" content="https://falaq18.github.io/img/me2.jpg">
+<meta property="og:image:width" content="880">
+<meta property="og:image:height" content="1100">
+<meta property="og:image:alt" content="falaq in a pink and orange rajasthani turban, arms crossed, grinning">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232747f5'/%3E%3Ctext x='15' y='46' font-family='Arial,sans-serif' font-weight='900' font-size='40' fill='%23fff'%3Ef%3C/text%3E%3Ccircle cx='46' cy='42' r='6' fill='%23ff6a3d'/%3E%3C/svg%3E">
 <title>Falaq Chopra</title>
-<meta name="description" content="Falaq Chopra: analyst, operator and builder from Gurgaon. Experience, things he has built, how he thinks, and the rabbit holes he goes down.">
+<meta name="description" content="Falaq Chopra: decision analyst at ZS, ex live-events operator, and a builder on the side. His setlist so far, the things he has built, how he thinks, and the rabbit holes he goes down.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* layout: a loud, colour-blocked feed of chunky cards with hard shadows.
-   hero (crossed-out job titles, circled "leave", portrait sticker) → two crossing ticker strips of receipts →
-   analyst/operator slider → setlist cards → built bento → brain pipeline with a travelling thought →
-   rabbit holes with live diagrams → background tabs → contact block. */
-:root {
-  /* palette: midnight = reliability, cobalt = confidence, sun = potential, tangerine = the quirk.
-     soft tints of each fill the cards so the loud colours stay special. */
-  --bg: #f4f5fa;
-  --dot: #dde1ee;
-  --card: #ffffff;
-  --ink: #0d1a3a;
-  --ink-soft: #55607f;
-  --line: #0d1a3a;
-  --shadow: #0d1a3a;
-  --midnight: #0d1a3a;
-  --on-night: #eef1fb;
-  --cobalt: #2747f5;
-  --on-cobalt: #ffffff;
-  --tang: #ff6a3d;
-  --sun: #ffcf33;
-  --sun-soft: #fff0c2;
-  --tang-soft: #ffe0d4;
-  --mint-soft: #d2f4e6;
-  --sky: #dfe5ff;
-  --pop-ink: #0d1a3a;
-  --pop-card: #ffffff;
-  --ph-1: #e6e9f4;
-  --ph-2: #dce1f0;
-  --go: #12b886;
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.classList.add('js')</script>
 
-  --display: "Archivo", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --body: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --bw: 2.5px;
-  --r: 24px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0a1024; --dot: #18203d; --card: #121a36; --ink: #eef1fb; --ink-soft: #a5aed0;
-    --line: #eef1fb; --shadow: #3f5cff; --midnight: #1b2654; --on-night: #eef1fb;
-    --cobalt: #3f5cff; --on-cobalt: #ffffff;
-    --sun-soft: #f3e2a6; --tang-soft: #f6cdbd; --mint-soft: #bfe9d8; --sky: #c7d0fb;
-    --ph-1: #18203d; --ph-2: #1e2748;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0a1024; --dot: #18203d; --card: #121a36; --ink: #eef1fb; --ink-soft: #a5aed0;
-  --line: #eef1fb; --shadow: #3f5cff; --midnight: #1b2654; --on-night: #eef1fb;
-  --cobalt: #3f5cff; --on-cobalt: #ffffff;
-  --sun-soft: #f3e2a6; --tang-soft: #f6cdbd; --mint-soft: #bfe9d8; --sky: #c7d0fb;
-  --ph-1: #18203d; --ph-2: #1e2748;
-  color-scheme: dark;
-}
+<a class="skip" href="#main">skip to content</a>
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  background-color: var(--bg);
-  color: var(--ink);
-  font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.7;
-  overflow-x: clip;
-}
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 40; background: var(--bg); }
-::selection { background: var(--sun); color: var(--pop-ink); }
-.wrap {
-  max-width: 1180px; margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--tang); outline-offset: 3px; border-radius: 8px; }
-h1, h2, h3, h4 { text-wrap: balance; }
-p { text-wrap: pretty; }
-section { scroll-margin-top: 90px; }
-
-.card { background: var(--card); border: var(--bw) solid var(--line); border-radius: var(--r); box-shadow: 6px 6px 0 var(--shadow); }
-.lift { transition: transform .22s ease, box-shadow .22s ease; }
-.lift:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--shadow); }
-.kick { display: inline-block; font-family: var(--mono); font-size: 13px; padding: 4px 12px; border: 2px solid var(--line); border-radius: 999px; background: var(--sun); color: var(--pop-ink); margin-bottom: 16px; }
-
-/* reveal: always visible, gets a little pop when it scrolls in */
-@media (prefers-reduced-motion: no-preference) {
-  [data-pop].in { animation: pop .6s cubic-bezier(.2,.9,.3,1.2) both; }
-}
-@keyframes pop { from { transform: translateY(14px) rotate(-.6deg) scale(.985); } to { transform: none; } }
-
-/* nav */
-.top { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 10px); z-index: 30; padding-top: 10px; }
-.pill { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--card); border: var(--bw) solid var(--line); border-radius: 999px; padding: 7px 8px 7px 20px; box-shadow: 4px 4px 0 var(--shadow); min-width: 0; }
-.logo { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 21px; text-decoration: none; letter-spacing: -0.02em; flex: none; }
-.logo span { color: var(--tang); }
-.links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; min-width: 0; }
-.links::-webkit-scrollbar { display: none; }
-.links a { font-family: var(--mono); font-size: 13px; padding: 7px 12px; border-radius: 999px; text-decoration: none; white-space: nowrap; transition: background .2s; }
-.links a:hover, .links a[aria-current="true"] { background: var(--sun); color: var(--pop-ink); }
-
-/* hero */
-.hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 72px; align-items: center; padding-block: 80px 64px; }
-.hello { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; border: 2px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--card); margin: 0; }
-.live { width: 10px; height: 10px; border-radius: 50%; background: var(--go); position: relative; }
-.live::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--go); opacity: 0; }
-@media (prefers-reduced-motion: no-preference) { .live::after { animation: ping 1.8s ease-out infinite; } }
-@keyframes ping { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.8); opacity: 0; } }
-h1 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(42px, 6.6vw, 92px); line-height: .95; letter-spacing: -0.03em; margin: 28px 0 30px; }
-h1 span { color: var(--tang); }
-.roles { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin: 0; font-size: 19px; }
-.role { position: relative; display: inline-block; font-family: var(--mono); font-size: 15px; padding: 5px 12px; border: 2px solid var(--line); border-radius: 10px; color: var(--pop-ink); transform: rotate(var(--rot, 0deg)); }
-.role::after { content: ""; position: absolute; left: -7%; right: -7%; top: 50%; height: 3.5px; margin-top: -2px; border-radius: 3px; background: var(--tang); transform: rotate(-5deg); transform-origin: left center; }
-@media (prefers-reduced-motion: no-preference) { .role::after { animation: strike .5s cubic-bezier(.7,0,.3,1) both; animation-delay: var(--d); } }
-@keyframes strike { from { transform: rotate(-5deg) scaleX(0); } to { transform: rotate(-5deg) scaleX(1); } }
-.shrug { font-family: var(--serif); font-style: italic; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; margin: 28px 0 30px; }
-@media (prefers-reduced-motion: no-preference) { .shrug { animation: rise .6s ease both 1.9s; } }
-@keyframes rise { from { transform: translateY(10px); opacity: .2; } to { transform: none; opacity: 1; } }
-.thesis { font-size: clamp(18px, 1.8vw, 21px); line-height: 1.65; max-width: 36em; margin: 0; }
-.thesis b { font-weight: 700; }
-.circ, .uline { position: relative; display: inline-block; white-space: nowrap; }
-.circ svg { position: absolute; left: -16%; top: -32%; width: 132%; height: 164%; overflow: visible; pointer-events: none; }
-.uline svg { position: absolute; left: -2%; bottom: -9px; width: 104%; height: 12px; overflow: visible; pointer-events: none; }
-.circ path, .uline path { fill: none; stroke-width: 2.6; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.circ path { stroke: var(--tang); }
-.uline path { stroke: var(--cobalt); stroke-width: 3; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero .circ path { animation: draw .8s ease both 2.3s; }
-  .hero .uline path { animation: draw .7s ease both 2.8s; }
-}
-@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
-.hl { color: var(--pop-ink); padding: 0 5px; border-radius: 6px; background: linear-gradient(var(--sun), var(--sun)) no-repeat 0 50% / 100% 100%; }
-@media (prefers-reduced-motion: no-preference) { .hl { animation: swipe .6s ease both 3.2s; } }
-@keyframes swipe { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
-
-.me { position: relative; justify-self: center; width: min(100%, 330px); }
-.photo {
-  position: relative; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 26px; border: var(--bw) solid var(--line);
-  box-shadow: 8px 8px 0 var(--shadow); overflow: hidden; display: grid; place-items: center;
-  background: repeating-linear-gradient(135deg, var(--ph-1) 0 14px, var(--ph-2) 14px 28px);
-}
-.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.ph-l { font-family: var(--mono); font-size: 12.5px; line-height: 1.4; text-align: center; background: var(--card); border: 2px solid var(--line); border-radius: 12px; padding: 8px 12px; max-width: 80%; }
-.ph-l small { display: block; color: var(--ink-soft); }
-.me .photo { transform: rotate(3deg); }
-.sticker { position: absolute; z-index: 2; background: var(--sun-soft); color: var(--pop-ink); border: 2px solid var(--line); border-radius: 16px; padding: 8px 14px; font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.1; box-shadow: 4px 4px 0 var(--shadow); }
-.me .sticker { top: -22px; left: -30px; transform: rotate(-8deg); max-width: 230px; }
-@media (prefers-reduced-motion: no-preference) { .me .sticker { animation: bob 4.5s ease-in-out infinite; } }
-@keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
-.cap { font-family: var(--serif); font-style: italic; font-size: 23px; text-align: center; margin: 22px 0 0; }
-.spark { position: absolute; right: -22px; bottom: 70px; width: 58px; height: 58px; z-index: 2; }
-.spark path { fill: var(--cobalt); stroke: var(--line); stroke-width: 2; }
-@media (prefers-reduced-motion: no-preference) { .spark { animation: spin 10s linear infinite; } }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ticker strips */
-.strips { position: relative; overflow: hidden; padding-block: 56px 64px; }
-.strip { width: 112%; margin-left: -6%; border-block: var(--bw) solid var(--line); overflow: hidden; color: var(--pop-ink); }
-.strip.a { background: var(--cobalt); color: var(--on-cobalt); transform: rotate(-2deg); }
-.strip.b { background: var(--sun); transform: rotate(1.6deg); margin-top: -6px; }
-.tick { display: flex; width: max-content; }
-@media (prefers-reduced-motion: no-preference) {
-  .strip.a .tick { animation: marquee 38s linear infinite; }
-  .strip.b .tick { animation: marquee 46s linear infinite reverse; }
-  .strip:hover .tick { animation-play-state: paused; }
-}
-.tick span { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: clamp(15px, 1.6vw, 19px); padding: 13px 0; white-space: nowrap; }
-.tick i { font-style: normal; padding-inline: 18px; }
-@keyframes marquee { to { transform: translateX(-50%); } }
-
-/* section heads */
-.sec { padding-block: 120px 24px; }
-.sec-h { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 64px; margin-bottom: 56px; }
-.sec-h h2 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(30px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.03em; margin: 0; }
-.sec-h p { max-width: 32em; margin: 0; font-size: 18px; color: var(--ink-soft); }
-
-/* mixer */
-.mixbox {
-  --m: 50; padding: 40px; border-radius: 34px; border: var(--bw) solid var(--line); box-shadow: 8px 8px 0 var(--shadow);
-  background: var(--cobalt);
-  background: linear-gradient(100deg, var(--cobalt) calc(100% - var(--m) * 1% - 12%), var(--tang) calc(100% - var(--m) * 1% + 12%));
-}
-.mix-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr); gap: 36px; align-items: center; }
-.deck { background: var(--card); border: var(--bw) solid var(--line); border-radius: 22px; padding: 24px 20px; text-align: center; transition: transform .25s ease; min-width: 0; }
-.deck .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
-.deck h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(20px, 2.2vw, 28px); letter-spacing: -0.03em; margin: 6px 0 6px; }
-.deck .np { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; margin: 0; }
-.meter { display: flex; justify-content: center; gap: 4px; margin-top: 12px; }
-.meter i { width: 12px; height: 12px; border-radius: 4px; border: 2px solid var(--line); transition: background .2s; }
-.deck.a .meter i.lit { background: var(--cobalt); }
-.deck.b .meter i.lit { background: var(--tang); }
-.fader { display: grid; gap: 8px; }
-.fl { display: flex; justify-content: space-between; gap: 8px; }
-.fl span { font-family: var(--mono); font-size: 12.5px; background: var(--card); border: 2px solid var(--line); border-radius: 999px; padding: 2px 10px; }
-#xf { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: grab; margin: 0; }
-#xf:active { cursor: grabbing; }
-#xf::-webkit-slider-runnable-track { height: 14px; background: var(--card); border: var(--bw) solid var(--line); border-radius: 999px; }
-#xf::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 40px; height: 40px; margin-top: -15px; border-radius: 50%; background: var(--sun-soft); border: var(--bw) solid var(--line); box-shadow: 3px 3px 0 var(--shadow); }
-#xf::-moz-range-track { height: 14px; background: var(--card); border: var(--bw) solid var(--line); border-radius: 999px; }
-#xf::-moz-range-thumb { width: 36px; height: 36px; border-radius: 50%; background: var(--sun-soft); border: var(--bw) solid var(--line); box-shadow: 3px 3px 0 var(--shadow); }
-.readout { margin: 34px 0 0; background: var(--card); border: var(--bw) solid var(--line); border-radius: 22px; padding: 24px 28px; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.55; min-height: 5.2em; }
-.readout b { display: inline-block; font-family: var(--mono); font-weight: 500; font-size: 13px; background: var(--sun-soft); color: var(--pop-ink); border: 2px solid var(--line); border-radius: 999px; padding: 2px 10px; margin-right: 10px; vertical-align: 2px; }
-
-/* setlist */
-.tracks { display: grid; gap: 48px; }
-.trk { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px 64px; padding: 48px 48px; }
-.trk-meta { min-width: 0; }
-.trk-meta .lbl { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
-.no { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 80px; line-height: .9; letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 2px var(--ink); margin: 4px 0 16px; transition: color .3s; }
-.trk:hover .no { color: var(--nc); }
-.when { display: inline-block; font-family: var(--mono); font-size: 12.5px; border: 2px solid var(--line); border-radius: 999px; padding: 2px 10px; background: var(--nc); color: var(--pop-ink); }
-.where { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 18px; line-height: 1.25; letter-spacing: -0.02em; margin: 12px 0 8px; }
-.trk-meta .role-l { font-size: 14.5px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
-.trk-main { min-width: 0; }
-.qk { display: block; font-family: var(--mono); font-size: 12.5px; color: var(--tang); margin-bottom: 4px; }
-.q { font-family: var(--serif); font-style: italic; font-size: clamp(27px, 3.1vw, 38px); line-height: 1.12; margin: 0 0 30px; }
-.blist { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
-.blist li { position: relative; padding-left: 28px; }
-.blist li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 11px; height: 11px; border: 2px solid var(--line); background: var(--nc, var(--sun)); transform: rotate(45deg); border-radius: 2px; }
-.stats { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 38px; }
-.stat { background: var(--sc); color: var(--pop-ink); border: 2px solid var(--line); border-radius: 18px; padding: 16px 20px 17px; min-width: 150px; box-shadow: 4px 4px 0 var(--shadow); transform: rotate(var(--rot, 0deg)); transition: transform .2s; }
-.stat:hover { transform: rotate(0deg) translateY(-3px); }
-.stat .n { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 26px; line-height: 1.05; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-.stat .l { display: block; font-family: var(--mono); font-size: 12.5px; margin-top: 4px; }
-.extra { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; margin-top: 40px; align-items: start; }
-.shot { position: relative; aspect-ratio: 16 / 10; max-width: 100%; border-radius: 20px; border: var(--bw) solid var(--line); overflow: hidden; display: grid; place-items: center; background: repeating-linear-gradient(135deg, var(--ph-1) 0 14px, var(--ph-2) 14px 28px); }
-.shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.fp { padding: 18px; border: var(--bw) solid var(--line); border-radius: 20px; background: var(--card); }
-.fp-row { display: flex; align-items: center; gap: 8px; }
-.fp-node { flex: 1 1 0; min-width: 0; border: 2px solid var(--line); border-radius: 16px; padding: 10px; text-align: center; background: var(--card); }
-.fp-node b { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 15px; }
-.fp-node span { display: block; font-size: 13px; line-height: 1.35; color: var(--ink-soft); margin-top: 4px; }
-.fp-hub { flex: none; width: 94px; height: 94px; border-radius: 50%; border: var(--bw) solid var(--line); background: var(--sun); color: var(--pop-ink); display: grid; place-items: center; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; }
-.fp-link { flex: 0 0 26px; height: 3px; background: repeating-linear-gradient(90deg, var(--ink) 0 7px, transparent 7px 12px); background-size: 24px 3px; }
-@media (prefers-reduced-motion: no-preference) {
-  .fp-link { animation: dash .8s linear infinite; }
-  .fp-link.r { animation-direction: reverse; }
-}
-@keyframes dash { to { background-position: 24px 0; } }
-.fp-cap { font-size: 14.5px; color: var(--ink-soft); margin: 12px 0 0; }
-
-/* built */
-.bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; }
-.proj { padding: 38px; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
-.b-ipt { grid-column: span 12; background: var(--cobalt); color: var(--on-cobalt); }
-.b-ap { grid-column: span 12; background: var(--midnight); color: var(--on-night); }
-.feat { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: start; }
-.feat-txt, .feat-vis { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
-.feat-vis { gap: 26px; padding-top: 6px; }
-.ipt-shot { margin: 0; border: var(--bw) solid var(--pop-ink); border-radius: 18px; overflow: hidden; background: #060611; box-shadow: 6px 6px 0 var(--pop-ink); transform: rotate(1.2deg); transition: transform .3s ease; }
-.b-ipt:hover .ipt-shot { transform: rotate(0deg); }
-.ipt-bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: var(--pop-card); color: var(--pop-ink); border-bottom: var(--bw) solid var(--pop-ink); font-family: var(--mono); font-size: 12px; }
-.ipt-bar i { width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--pop-ink); }
-.ipt-bar i:nth-child(1) { background: var(--tang); } .ipt-bar i:nth-child(2) { background: var(--sun); } .ipt-bar i:nth-child(3) { background: var(--mint-soft); }
-.ipt-bar span { margin-left: 8px; }
-.ipt-shot img { display: block; width: 100%; height: auto; }
-.grill { background: var(--pop-card); color: var(--pop-ink); border: var(--bw) solid var(--pop-ink); border-radius: 18px; padding: 20px 22px 22px; box-shadow: 5px 5px 0 var(--sun); }
-.grill-h { display: block; font-family: var(--mono); font-size: 12.5px; color: #4a5272; margin-bottom: 12px; }
-.grill-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.grill-tabs button { font-family: var(--mono); font-size: 13px; padding: 6px 13px; border-radius: 999px; border: 2px solid var(--pop-ink); background: transparent; color: var(--pop-ink); cursor: pointer; transition: transform .15s; }
-.grill-tabs button:hover { transform: translateY(-2px); }
-.grill-tabs button[aria-pressed="true"] { background: var(--sun); }
-.grill-tabs button[data-g="1"][aria-pressed="true"] { background: var(--tang-soft); }
-.grill-tabs button[data-g="2"][aria-pressed="true"] { background: var(--mint-soft); }
-.grill-k { font-family: var(--mono); font-size: 12px; color: #4a5272; }
-.grill-text { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.2; margin: 6px 0 10px; }
-.grill-sub { display: block; font-size: 15px; line-height: 1.5; color: #3d4566; }
-.grill-feeds { display: inline-block; margin-top: 14px; font-family: var(--mono); font-size: 12px; border: 2px dashed var(--pop-ink); border-radius: 999px; padding: 3px 11px; }
-@media (prefers-reduced-motion: no-preference) { .grill-q.swap { animation: grillIn .35s ease both; } }
-@keyframes grillIn { from { opacity: 0; transform: translateY(8px); } }
-.byok { font-size: 15.5px; border-top: 2px dashed currentColor; padding-top: 18px; }
-.byok b { font-family: var(--mono); font-weight: 500; font-size: 12.5px; background: var(--pop-card); color: var(--pop-ink); border-radius: 999px; padding: 2px 10px; margin-right: 8px; white-space: nowrap; }
-.apf-box { border: 2px dashed #ffffff59; border-radius: 20px; padding: 22px 24px 18px; }
-.apf-h { display: block; font-family: var(--mono); font-size: 12.5px; opacity: .8; margin-bottom: 6px; }
-.apf { list-style: none; margin: 0; padding: 0; }
-.apf li { position: relative; display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 16px; align-items: center; padding: 13px 0; }
-.apf li + li::before { content: "↓"; position: absolute; top: -11px; left: 35px; font-family: var(--mono); font-size: 14px; color: var(--sun); }
-.apf b { font-family: var(--mono); font-weight: 500; font-size: 13px; text-align: center; border: 2px solid currentColor; border-radius: 999px; padding: 5px 0; }
-.apf span { font-size: 15.5px; line-height: 1.4; }
-.apf .audit b { background: var(--tang); color: #ffffff; border-color: var(--tang); }
-.apf .you b { background: var(--sun); color: var(--pop-ink); border-color: var(--sun); }
-.apf-foot { margin: 8px 0 0; font-family: var(--mono); font-size: 12.5px; opacity: .8; }
-.b-prop { grid-column: span 12; background: var(--sun-soft); color: var(--pop-ink); }
-.b-pile { grid-column: span 12; padding: 38px; }
-.b-ipt .shot, .b-ap .shot { --ph-1: #ffffff2e; --ph-2: #ffffff14; border-color: currentColor; }
-.b-ipt .ph-l, .b-ap .ph-l { background: var(--pop-card); color: var(--pop-ink); border-color: var(--pop-ink); }
-.b-ipt .ph-l small, .b-ap .ph-l small { color: #5d5770; }
-.proj h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(24px, 2.6vw, 34px); line-height: 1; letter-spacing: -0.04em; margin: 4px 0 0; }
-.one { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2vw, 25px); line-height: 1.2; margin: 0; }
-.proj p { margin: 0; }
-.minis { display: flex; flex-wrap: wrap; gap: 8px; }
-.minis span { font-family: var(--mono); font-size: 12.5px; border: 2px solid currentColor; border-radius: 999px; padding: 3px 11px; }
-.b-ap .minis span:first-child, .b-ipt .minis span:first-child { background: var(--sun); color: var(--pop-ink); border-color: var(--sun); }
-.btn-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: var(--sun); color: var(--pop-ink); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 9px 18px; font-family: var(--mono); font-size: 14px; font-weight: 500; text-decoration: none; transition: transform .2s; }
-.btn-link:hover { transform: translateY(-2px) rotate(-1deg); }
-.prop-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 56px; }
-.prop-main { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
-.wb-k { align-self: flex-start; font-family: var(--mono); font-size: 12.5px; background: var(--pop-card); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 3px 12px; }
-.pivot { display: grid; grid-template-columns: minmax(0, 1fr) 124px minmax(0, 1fr); gap: 16px; align-items: center; margin-top: 8px; }
-.pv { background: var(--pop-card); border: 2px solid var(--pop-ink); border-radius: 18px; padding: 20px; box-shadow: 4px 4px 0 var(--pop-ink); min-width: 0; }
-.pv b { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 15px; line-height: 1.3; margin-bottom: 8px; }
-.pv p { font-size: 14.5px; line-height: 1.5; margin: 0; }
-.pv.v2 { background: var(--sun); }
-.pv-arrow { display: grid; justify-items: center; gap: 8px; text-align: center; font-family: var(--mono); font-size: 12px; line-height: 1.35; }
-.pv-arrow .shaft { width: 100%; height: 4px; position: relative; background: repeating-linear-gradient(90deg, var(--pop-ink) 0 8px, transparent 8px 13px); background-size: 26px 4px; }
-.pv-arrow .shaft::after { content: ""; position: absolute; right: -4px; top: -6px; border-left: 12px solid var(--pop-ink); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
-@media (prefers-reduced-motion: no-preference) { .pv-arrow .shaft { animation: dash .9s linear infinite; } }
-.rules { font-weight: 600; margin: 0; }
-.qs h4 { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; margin: 0 0 12px; }
-.qs ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
-.qs li { position: relative; padding-left: 34px; font-size: 15.5px; line-height: 1.5; }
-.qs li::before { content: "?"; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--pop-ink); color: var(--sun-soft); font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 13px; display: grid; place-items: center; }
-.pile-h h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 30px; letter-spacing: -0.03em; margin: 0 0 26px; }
-.pile-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
-.idea { border: 2px solid var(--line); border-radius: 18px; padding: 22px; background: var(--ic); color: var(--pop-ink); display: flex; flex-direction: column; gap: 8px; min-width: 0; transition: transform .2s; }
-.idea:hover { transform: rotate(-1deg) translateY(-3px); }
-.idea .lab { align-self: flex-start; font-family: var(--mono); font-size: 11.5px; background: var(--pop-card); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 1px 9px; }
-.idea b { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 16px; line-height: 1.25; }
-.idea p { margin: 0; font-size: 14.5px; line-height: 1.5; }
-
-/* brain */
-.pipe-card { padding: 48px 40px 36px; }
-.pipe { position: relative; display: grid; grid-template-columns: minmax(84px, auto) repeat(6, minmax(0, 1fr)) minmax(84px, auto); gap: 10px; align-items: start; }
-.rail { position: absolute; left: 4%; right: 4%; top: 31px; height: 3px; background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 17px); }
-.io { position: relative; z-index: 1; align-self: start; margin-top: 12px; font-family: var(--mono); font-size: 12.5px; line-height: 1.3; text-align: center; border: 2px solid var(--line); border-radius: 16px; padding: 7px 10px; color: var(--pop-ink); transition: transform .3s; max-width: 150px; }
-.io.in { background: var(--tang-soft); }
-.io.out { background: var(--sun); }
-.io.flash { transform: scale(1.12) rotate(-3deg); }
-.node { position: relative; z-index: 1; display: grid; justify-items: center; gap: 10px; background: none; border: 0; cursor: pointer; color: inherit; font: inherit; padding: 0; }
-.node .c { width: 62px; height: 62px; border-radius: 50%; border: var(--bw) solid var(--line); background: var(--card); display: grid; place-items: center; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 21px; box-shadow: 4px 4px 0 var(--shadow); transition: transform .3s cubic-bezier(.2,.9,.3,1.3), background .3s; }
-.node .t { font-family: var(--mono); font-size: 12.5px; line-height: 1.3; text-align: center; }
-.node:hover .c { transform: translateY(-3px); }
-.node.on .c { background: var(--sc); color: var(--pop-ink); transform: scale(1.16) rotate(-8deg); }
-.loop { grid-column: 2 / 8; position: relative; height: 26px; margin: 6px 6% 0; border: 2px dashed var(--ink-soft); border-top: 0; border-radius: 0 0 22px 22px; }
-.loop::before { content: ""; position: absolute; left: -7px; top: -8px; border-bottom: 10px solid var(--ink-soft); border-left: 6px solid transparent; border-right: 6px solid transparent; }
-.loop span { position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); font-family: var(--mono); font-size: 12.5px; background: var(--card); padding: 0 10px; white-space: nowrap; color: var(--ink-soft); }
-.tdot { position: absolute; z-index: 3; top: 22px; left: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--tang); border: 2px solid var(--line); opacity: 0; transition: left .65s cubic-bezier(.6,0,.3,1), opacity .3s; pointer-events: none; }
-.tdot.show { opacity: 1; }
-.pipe-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin-top: 44px; }
-.pipe-foot p { margin: 0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ink-soft); }
-.play { font-family: var(--mono); font-size: 14px; background: var(--tang); color: var(--pop-ink); border: 2px solid var(--line); border-radius: 999px; padding: 9px 18px; cursor: pointer; box-shadow: 3px 3px 0 var(--shadow); transition: transform .2s; }
-.play:hover { transform: translate(-2px, -2px); }
-.play[disabled] { opacity: .6; cursor: default; transform: none; }
-.stops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 44px; list-style: none; padding: 0; }
-.stop { padding: 30px 28px 32px; transition: background .3s, transform .3s, box-shadow .3s, color .3s; cursor: pointer; min-width: 0; }
-.stop.on { background: var(--sc); color: var(--pop-ink); transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--shadow); }
-.stop-h { display: flex; align-items: center; gap: 10px; }
-.stop-n { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--line); background: var(--sc); color: var(--pop-ink); display: grid; place-items: center; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; }
-.stop.on .stop-n { border-color: var(--pop-ink); background: var(--pop-card); }
-.stop h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 20px; letter-spacing: -0.03em; margin: 0; }
-.does { font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.2; margin: 10px 0 12px; }
-.ex { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; font-size: 15.5px; line-height: 1.6; }
-.ex li { position: relative; padding-left: 18px; }
-.ex li::before { content: "→"; position: absolute; left: 0; top: 0; font-family: var(--mono); color: var(--tang); }
-.stop.on .ex li::before { color: var(--pop-ink); }
-.closing { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: -0.03em; text-align: center; margin: 64px 0 0; line-height: 1.3; }
-.closing .y { background: var(--sun); color: var(--pop-ink); padding: 0 8px; border-radius: 8px; }
-.closing .n { background: var(--tang); color: var(--pop-ink); padding: 0 8px; border-radius: 8px; }
-
-/* brain: a browser window with too many tabs open */
-.mind { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: start; }
-.browser { margin: 0; padding: 0; overflow: hidden; }
-.b-bar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--sky); color: var(--pop-ink); border-bottom: var(--bw) solid var(--line); }
-.b-dots { display: flex; gap: 6px; flex: none; }
-.b-dots i { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--pop-ink); background: var(--tang); }
-.b-dots i:nth-child(2) { background: var(--sun); }
-.b-dots i:nth-child(3) { background: var(--mint-soft); }
-.b-url { flex: 1; min-width: 0; font-family: var(--mono); font-size: 12.5px; background: var(--pop-card); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 3px 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.b-tabs { display: flex; align-items: flex-end; gap: 6px; padding: 12px 12px 0; background: var(--bg); border-bottom: var(--bw) solid var(--line); overflow-x: auto; scrollbar-width: none; }
-.b-tabs::-webkit-scrollbar { display: none; }
-.b-tabs [role="tab"] { flex: none; font-family: var(--mono); font-size: 12.5px; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-bottom: 0; border-radius: 12px 12px 0 0; padding: 8px 13px 9px; cursor: pointer; white-space: nowrap; opacity: .72; transition: opacity .2s, background .2s, transform .2s; }
-.b-tabs [role="tab"]:hover { opacity: 1; }
-.b-tabs [role="tab"][aria-selected="true"] { background: var(--tc); color: var(--pop-ink); opacity: 1; transform: translateY(1px); font-weight: 500; }
-.b-more { flex: none; align-self: center; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); padding: 0 8px 6px; white-space: nowrap; }
-.b-view { display: grid; justify-items: center; gap: 18px; padding: 34px 24px 24px; min-height: 300px; }
-.b-art { width: min(100%, 340px); height: auto; overflow: visible; }
-.b-art[hidden] { display: none; }
-.b-cap { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.02em; text-align: center; margin: 0; }
-.browser figcaption { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink-soft); text-align: center; padding: 0 20px 24px; }
-.ln { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.f-t { fill: var(--tang-soft); }
-.f-s { fill: var(--sun-soft); }
-.b-txt { font-family: var(--mono); font-size: 11px; fill: var(--pop-ink); text-anchor: middle; }
-.dt { fill: var(--cobalt); stroke: var(--line); stroke-width: 2; }
-.draw, .draw2 { stroke-dasharray: 1; stroke-dashoffset: 0; }
-.crack { fill: none; stroke: var(--tang); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
-.teeth { fill: none; stroke: var(--ink); stroke-width: 12; stroke-dasharray: 7 7; }
-.gear { transform-box: fill-box; transform-origin: center; }
-@media (prefers-reduced-motion: no-preference) {
-  .b-art.on .draw { animation: draw 1.3s ease both .1s; }
-  .b-art.on .draw2 { animation: draw .5s ease both 1.3s; }
-  .b-art.on .crack { animation: draw .8s ease both .3s; }
-  .b-art.on .pop1 { animation: rise .5s ease both .3s; }
-  .b-art.on .zr { animation: zoomout 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-  .b-art.on .z2 { animation-delay: .25s; }
-  .b-art.on .z3 { animation-delay: .5s; }
-  .b-art.on .gear.cw { animation: spin 7s linear infinite; }
-  .b-art.on .gear.ccw { animation: spin 5s linear infinite reverse; }
-}
-@keyframes zoomout { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-.blf li { padding-inline: 14px; margin-inline: -14px; border-top: 0; border-radius: 14px; transition: background .25s, box-shadow .25s; cursor: default; }
-.blf li.on { background: var(--card); box-shadow: 4px 4px 0 var(--shadow); }
-@media (max-width: 860px) {
-  .mind { grid-template-columns: minmax(0, 1fr); gap: 44px; }
-}
-@media (max-width: 560px) {
-  .b-view { padding: 26px 16px 18px; min-height: 0; }
-  .blf p { font-size: 16.5px; }
-}
-.beliefs { min-width: 0; }
-.beliefs h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 24px; letter-spacing: -0.02em; margin: 0 0 14px; }
-.blf { list-style: none; margin: 0; padding: 0; }
-.blf li { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 18px; padding: 20px 0; border-top: 2px solid var(--dot); }
-.blf li:first-child { border-top: 0; }
-.blf li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); background: var(--c); margin-top: 8px; }
-.blf p { margin: 0; font-size: 18px; line-height: 1.65; }
-.blf b { font-family: var(--display); font-stretch: 125%; font-weight: 700; }
-.curious { margin-top: 34px; }
-.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.chips li { font-family: var(--mono); font-size: 13px; border: 2px solid var(--line); border-radius: 999px; padding: 5px 14px; background: var(--card); }
-@media (max-width: 860px) {
-  .mind { grid-template-columns: minmax(0, 1fr); gap: 44px; }
-  .venn { max-width: 480px; justify-self: center; width: 100%; }
-}
-@media (max-width: 560px) {
-  .venn { padding: 24px 16px 20px; }
-  .blf p { font-size: 16.5px; }
-}
-
-/* rabbit holes */
-.under { padding: 52px 48px; background: var(--midnight); color: var(--on-night); }
-.under .k { font-family: var(--mono); font-size: 13px; color: var(--sun); }
-.under h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(25px, 3.4vw, 44px); line-height: 1.02; letter-spacing: -0.04em; margin: 12px 0 34px; }
-.under h3 mark { background: var(--sun); color: var(--pop-ink); padding: 0 8px; border-radius: 10px; }
-.swaps { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.swaps li { display: grid; grid-template-columns: minmax(0, .75fr) 36px minmax(0, 1.25fr); gap: 12px; align-items: center; padding: 10px 12px; border-radius: 14px; transition: background .2s; }
-.swaps li:hover { background: #ffffff14; }
-.old { position: relative; justify-self: start; font-family: var(--mono); font-size: 14px; opacity: .7; }
-.old::after { content: ""; position: absolute; left: -3%; right: -3%; top: 50%; height: 2.5px; background: var(--tang); transform: rotate(-3deg); }
-.swaps .arr { font-family: var(--mono); color: var(--sun); text-align: center; }
-.new { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.1vw, 26px); line-height: 1.2; }
-.hole { padding: 52px 48px; margin-top: 48px; }
-.hole-no { display: inline-block; font-family: var(--mono); font-size: 13px; border: 2px solid var(--line); border-radius: 999px; padding: 3px 12px; background: var(--hc); color: var(--pop-ink); }
-.hole h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(23px, 2.8vw, 36px); line-height: 1.02; letter-spacing: -0.04em; margin: 14px 0 0; }
-.hole-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 64px; margin-top: 36px; align-items: start; }
-.hole-grid > div { min-width: 0; }
-.hq { margin: 0 0 26px; }
-.hq .k { display: block; font-family: var(--mono); font-size: 12.5px; color: var(--tang); margin-bottom: 2px; }
-.landed { background: var(--sun); color: var(--pop-ink); border: 2px solid var(--line); border-radius: 18px; padding: 18px 20px; margin: 4px 0 0; font-weight: 500; }
-.landed .k { display: block; font-family: var(--mono); font-size: 12.5px; margin-bottom: 2px; }
-.wide { grid-column: 1 / -1; }
-.art-k { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); margin: 0 0 12px; }
-.ladder { display: grid; gap: 12px; }
-.rung { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 14px; align-items: center; padding: 13px 18px; border: 2px solid var(--line); border-radius: 16px; background: var(--rc); color: var(--pop-ink); margin-left: var(--off); transform-origin: left center; }
-.rung .lv { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 28px; line-height: 1; }
-.rung .nm { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 15px; }
-.rung .qq { display: block; font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.2; }
-.rung .eg { display: block; font-family: var(--mono); font-size: 11.5px; margin-top: 2px; }
-@media (prefers-reduced-motion: no-preference) {
-  .ladder.in .rung { animation: rungIn .55s cubic-bezier(.2,.9,.3,1.2) both; animation-delay: calc(var(--i) * 90ms); }
-  .chain.in > * { animation: pillIn .35s ease both; animation-delay: calc(var(--i) * 45ms); }
-}
-@keyframes rungIn { from { transform: translateX(-18px) scaleX(.92); } to { transform: none; } }
-@keyframes pillIn { from { transform: translateY(8px) scale(.9); } to { transform: none; } }
-.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 8px; margin: 0 0 22px; }
-.chain .p { font-family: var(--mono); font-size: 13px; line-height: 1.4; border: 2px solid var(--line); border-radius: 999px; padding: 4px 12px; background: var(--card); white-space: nowrap; }
-.chain .p.anc { background: var(--sun-soft); color: var(--pop-ink); font-weight: 500; }
-.chain.land .p { background: var(--sun); color: var(--pop-ink); }
-.chain .ar, .so-top .ar { font-family: var(--mono); color: var(--tang); font-weight: 500; }
-.notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 40px 0; }
-.nt { border: 2px solid var(--line); border-radius: 18px; padding: 20px; background: var(--nc); color: var(--pop-ink); transform: rotate(var(--rot)); box-shadow: 4px 4px 0 var(--shadow); transition: transform .2s; }
-.nt:hover { transform: rotate(0deg) translateY(-3px); }
-.nt b { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 16px; margin-bottom: 6px; }
-.nt p { margin: 0; font-size: 15px; line-height: 1.5; }
-.closer { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2.2vw, 26px); line-height: 1.25; margin: 6px 0 0; }
-.figs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; justify-items: center; }
-.figs .fig { width: min(100%, 360px); }
-.fig { margin: 0; min-width: 0; }
-.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
-.fig figcaption { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); text-align: center; margin-top: 6px; line-height: 1.45; }
-.fw-ring { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-dasharray: 10 9; }
-.fw-head { fill: var(--tang); stroke: var(--line); stroke-width: 1.5; }
-.fw-spin { transform-box: view-box; transform-origin: 150px 150px; }
-@media (prefers-reduced-motion: no-preference) { .fw-spin { animation: spin 16s linear infinite; } }
-.fw-node { stroke: var(--line); stroke-width: 2.5; }
-.fw-t { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 13px; fill: #16131d; text-anchor: middle; }
-.fw-e { font-family: var(--mono); font-size: 11.5px; fill: var(--tang); text-anchor: middle; }
-.fw-c { font-family: var(--serif); font-style: italic; font-size: 20px; fill: var(--ink); text-anchor: middle; }
-.vn { stroke: var(--line); stroke-width: 2.5; fill-opacity: .55; }
-.vn-t { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 13px; fill: var(--ink); text-anchor: middle; }
-.vn-s { font-family: var(--mono); font-size: 10.5px; fill: var(--ink); text-anchor: middle; }
-.vn-c { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 15px; fill: var(--ink); text-anchor: middle; }
-.vn-f { font-family: var(--mono); font-size: 10.5px; fill: var(--ink-soft); text-anchor: middle; }
-.so { display: grid; gap: 28px; }
-.so-row { border: 2px solid var(--line); border-radius: 20px; padding: 22px; background: var(--card); }
-.so-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 12px; }
-.so-a { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 15px; background: var(--cobalt); color: var(--on-cobalt); border: 2px solid var(--line); border-radius: 999px; padding: 4px 12px; }
-.so-x { position: relative; font-family: var(--mono); font-size: 13.5px; color: var(--ink-soft); }
-.so-x::after { content: ""; position: absolute; left: -3%; right: -3%; top: 50%; height: 2.5px; background: var(--tang); transform: rotate(-3deg); }
-.so-k { display: block; font-family: var(--mono); font-size: 12px; color: var(--tang); margin-bottom: 8px; }
-.so-b { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.so-b li { font-family: var(--mono); font-size: 13px; border: 2px solid var(--line); border-radius: 999px; padding: 3px 11px; background: var(--mint-soft); color: var(--pop-ink); }
-.eq { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(22px, 3vw, 38px); letter-spacing: -0.04em; line-height: 1.15; margin: 4px 0 6px; }
-.eq .op { color: var(--tang); }
-.eq-note { font-family: var(--mono); font-size: 12.5px; color: var(--tang); margin: 6px 0 24px; }
-.vs { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
-.fd { border: 2px solid var(--line); border-radius: 18px; padding: 18px; background: var(--fc); color: var(--pop-ink); }
-.fd b { display: block; font-family: var(--mono); font-size: 12.5px; margin-bottom: 4px; }
-.fd p { margin: 0; font-size: 15px; line-height: 1.45; }
-.vs-badge { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-8deg); z-index: 2; width: 44px; height: 44px; border-radius: 50%; background: var(--tang); color: var(--pop-ink); border: 2px solid var(--line); display: grid; place-items: center; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; }
-.idea-k { font-family: var(--mono); font-size: 12.5px; margin: 0 0 10px; }
-.odds { font-family: var(--serif); font-style: italic; font-size: 23px; margin: 14px 0 20px; }
-.asks { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
-.asks li { font-family: var(--mono); font-size: 13px; border: 2px solid var(--line); border-radius: 999px; padding: 3px 11px; background: var(--sky); color: var(--pop-ink); }
-
-/* background */
-.bg-q { font-family: var(--serif); font-style: italic; font-size: clamp(24px, 3vw, 36px) !important; line-height: 1.15; color: var(--ink) !important; max-width: 22em; }
-.pgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; list-style: none; margin: 0; padding: 0; }
-.pc { position: relative; transform: rotate(var(--rot)); transition: transform .25s; }
-.pc .sticker { top: -16px; right: -14px; font-size: 16px; padding: 6px 11px; border-radius: 12px; transform: rotate(7deg); box-shadow: 3px 3px 0 var(--shadow); }
-.pc p em { font-family: var(--serif); font-size: 1.08em; }
-.pc:hover { transform: rotate(0deg) translateY(-4px); }
-.pc .photo { box-shadow: 6px 6px 0 var(--shadow); border-radius: 22px; }
-.pc h3 { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 17px; letter-spacing: -0.02em; margin: 16px 0 4px; }
-.pc p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
-.likes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 64px 0 0; padding: 0; }
-.like { border: 2px solid var(--line); border-radius: 20px; padding: 22px; background: var(--lc); color: var(--pop-ink); transition: transform .2s; min-width: 0; }
-.like:hover { transform: translateY(-4px) rotate(1deg); }
-.like svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; display: block; margin-bottom: 10px; }
-.like b { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 14.5px; line-height: 1.3; }
-.like p { margin: 6px 0 0; font-size: 14px; line-height: 1.45; }
-
-/* photos, reel link, camera roll */
-.photo.art { background: var(--ac); }
-.photo.art svg { width: 48%; height: auto; fill: none; stroke: var(--pop-ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.reel { position: relative; display: grid; place-items: center; align-content: center; gap: 14px; aspect-ratio: 16 / 10; max-width: 100%; border-radius: 20px; border: var(--bw) solid var(--line); background: linear-gradient(135deg, var(--cobalt), var(--tang)); color: #ffffff; text-decoration: none; box-shadow: 5px 5px 0 var(--shadow); transition: transform .2s, box-shadow .2s; }
-.reel:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--shadow); }
-.reel-play { width: 64px; height: 64px; border-radius: 50%; background: #ffffff; color: var(--cobalt); border: var(--bw) solid var(--line); display: grid; place-items: center; font-size: 22px; padding-left: 4px; }
-.reel-t { font-family: var(--mono); font-size: 14px; background: #ffffff; color: #0d1a3a; border: 2px solid var(--line); border-radius: 999px; padding: 4px 14px; }
-.roll { margin-top: 64px; }
-.roll-g { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 240px)); gap: 32px; }
-.roll-g li { transform: rotate(var(--rot)); transition: transform .25s; }
-.roll-g li:hover { transform: rotate(0deg) translateY(-4px); }
-.roll-g img { display: block; width: 100%; max-width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; border: var(--bw) solid var(--line); box-shadow: 6px 6px 0 var(--shadow); }
-@media (max-width: 560px) { .roll-g { gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
-/* contact */
-.contact { position: relative; padding: 68px 60px; background: var(--cobalt); color: var(--on-cobalt); border-radius: 36px; overflow: hidden; }
-.contact h2 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(28px, 4.4vw, 58px); line-height: .98; letter-spacing: -0.04em; margin: 0 0 16px; max-width: 13em; }
-.contact > p { font-size: 18px; max-width: 36em; margin: 0 0 28px; }
-.mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
-.addr { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: clamp(17px, 3.4vw, 40px); letter-spacing: -0.03em; overflow-wrap: anywhere; min-width: 0; user-select: all; }
-.copy { font-family: var(--mono); font-size: 14px; background: var(--sun-soft); color: var(--pop-ink); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 9px 18px; cursor: pointer; transition: transform .2s; }
-.copy:hover { transform: rotate(-3deg) scale(1.04); }
-.copied { font-family: var(--mono); font-size: 13px; min-height: 1.6em; margin: 10px 0 18px; }
-.c-links { display: flex; flex-wrap: wrap; gap: 12px; }
-.c-links a { font-family: var(--mono); font-size: 14px; text-decoration: none; background: var(--pop-card); color: var(--pop-ink); border: 2px solid var(--pop-ink); border-radius: 999px; padding: 8px 16px; transition: transform .2s; }
-.c-links a:hover { transform: translateY(-2px); }
-.contact .spark { right: 30px; top: 26px; bottom: auto; width: 74px; height: 74px; }
-.contact .spark path { fill: var(--sun); stroke: var(--pop-ink); }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; padding-block: 34px 44px; font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
-
-/* responsive */
-@media (max-width: 1000px) {
-  .stops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .likes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .b-ipt, .b-ap { grid-column: span 12; }
-}
-@media (max-width: 860px) {
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 56px; padding-block: 36px 24px; }
-  .me { width: min(82%, 300px); }
-  .trk { grid-template-columns: minmax(0, 1fr); padding: 32px 26px; }
-  .sec { padding-block: 96px 20px; }
-  .bento { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .bento > * { grid-column: auto; }
-  .hole, .under { padding: 36px 28px; }
-  .proj, .b-pile { padding: 30px; }
-  .feat { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-  .ipt-shot { transform: rotate(0.8deg); }
-  .no { font-size: 72px; }
-  .extra, .prop-grid, .hole-grid { grid-template-columns: minmax(0, 1fr); }
-  .mix-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .fader { grid-column: 1 / -1; grid-row: 2; }
-  .pipe { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; }
-  .pipe .io { grid-column: 1 / -1; justify-self: center; margin-top: 0; max-width: none; }
-  .rail, .tdot, .loop { display: none; }
-  .notes { grid-template-columns: minmax(0, 1fr); }
-  .likes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 560px) {
-  body { font-size: 16px; }
-  .stops, .pile-grid { grid-template-columns: minmax(0, 1fr); }
-  .likes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pgrid { gap: 22px 16px; }
-  .pivot { grid-template-columns: minmax(0, 1fr); }
-  .pv-arrow .shaft { width: 4px; height: 40px; background: repeating-linear-gradient(180deg, var(--pop-ink) 0 8px, transparent 8px 13px); }
-  .pv-arrow .shaft::after { right: -6px; top: auto; bottom: -6px; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 12px solid var(--pop-ink); border-bottom: 0; }
-  .swaps li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
-  .swaps .arr { text-align: left; }
-  .figs, .vs { grid-template-columns: minmax(0, 1fr); }
-  .fp-row { flex-direction: column; }
-  .fp-link { flex-basis: 20px; width: 3px; height: 20px; background: repeating-linear-gradient(180deg, var(--ink) 0 7px, transparent 7px 12px); }
-  .fp-node { width: 100%; }
-  .chain .p { white-space: normal; }
-  .contact { padding: 44px 22px; border-radius: 28px; }
-  .sec { padding-block: 80px 16px; }
-  .trk { padding: 28px 20px; }
-  .proj, .b-pile { padding: 24px 20px; }
-  .stop { padding: 24px 20px; }
-  .contact .spark { width: 52px; height: 52px; right: 16px; top: 16px; }
-  .mixbox { padding: 22px 16px; }
-  .deck { padding: 14px 10px; }
-  .hole, .under, .pipe-card { padding: 30px 20px; }
-  .me .sticker { left: -10px; font-size: 18px; }
-}
-</style>
-
-<header class="top">
+<header class="nav">
   <div class="wrap">
     <nav class="pill" aria-label="sections">
-      <a class="logo" href="#top">falaq<span>.</span></a>
-      <div class="links">
-        <a href="#setlist">setlist</a><a href="#built">built</a><a href="#brain">my brain</a><a href="#holes">rabbit holes</a><a href="#hi">say hi</a>
-      </div>
+      <a class="logo" href="#top" aria-label="falaq, back to top">falaq<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#setlist">setlist</a></li>
+        <li><a href="#built">built</a></li>
+        <li><a href="#brain">my brain</a></li>
+        <li><a href="#holes">rabbit holes</a></li>
+        <li><a href="#off">off the clock</a></li>
+        <li><a href="#hi">say hi</a></li>
+      </ul>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet"><span class="bars" aria-hidden="true"></span><span class="menu-l">menu</span></button>
+      <span class="prog" aria-hidden="true"></span>
     </nav>
+    <div class="sheet" id="sheet" hidden>
+      <ul>
+        <li style="--i:0"><a href="#setlist">setlist <span class="meta">experience</span></a></li>
+        <li style="--i:1"><a href="#built">built <span class="meta">projects</span></a></li>
+        <li style="--i:2"><a href="#brain">my brain <span class="meta">how i think</span></a></li>
+        <li style="--i:3"><a href="#holes">rabbit holes <span class="meta">deep dives</span></a></li>
+        <li style="--i:4"><a href="#off">off the clock <span class="meta">the rest of me</span></a></li>
+        <li style="--i:5"><a href="#hi">say hi <span class="meta">contact</span></a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
   <!-- hero -->
-  <div class="wrap hero">
+  <div class="wrap hero" id="top">
     <div>
-      <p class="hello"><span class="live" aria-hidden="true"></span>hey, glad you're here.</p>
-      <h1>i'm falaq<span>.</span></h1>
-      <p class="roles">on paper, i'm a
-        <span class="role" style="--rot:-2deg; --d:.4s; background: var(--sky)">data analyst</span>
-        <span class="role" style="--rot:1.5deg; --d:.75s; background: var(--tang-soft)">marketer</span>
-        <span class="role" style="--rot:-1deg; --d:1.1s; background: var(--mint-soft)">event guy</span>
-        <span class="role" style="--rot:2deg; --d:1.45s; background: var(--sun-soft)">home dj</span>
+      <p class="hello enter" style="--d:0ms"><span class="live" aria-hidden="true"></span>hey, glad you're here.</p>
+      <h1 class="enter" style="--d:80ms">i'm falaq<span class="dot">.</span></h1>
+      <p class="roles enter" style="--d:160ms">on paper, i'm a
+        <span class="role" style="--rot:-2deg; --sd:420ms; --rc: var(--sky)">data analyst</span>
+        <span class="role" style="--rot:1.5deg; --sd:560ms; --rc: var(--tang-soft)">marketer</span>
+        <span class="role" style="--rot:-1deg; --sd:700ms; --rc: var(--mint-soft)">event guy</span>
+        <span class="role" style="--rot:2deg; --sd:840ms; --rc: var(--sun-soft)">home dj</span>
       </p>
-      <p class="shrug">yeah, i stopped trying to pick just one.</p>
-      <p class="thesis"><b>here's the actual thread:</b> a patient who quits a long-term therapy halfway. a 20-year-old who scrolls past a campaign in half a second. different worlds, same two questions for me: why did they <span class="circ">leave<svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M64 5 C100 3 118 18 114 33 C110 51 72 57 42 55 C14 52 3 39 6 25 C9 11 38 4 80 7"></path></svg></span>, and what would have made them <span class="uline">stay<svg viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C14 2 25 11 38 6 S62 2 75 7 S91 10 98 5"></path></svg></span>? i like answering both, and then <span class="hl">building the fix</span>.</p>
+      <p class="shrug aside enter" style="--d:820ms">yeah, i stopped trying to pick just one.</p>
+      <p class="thesis enter" style="--d:900ms"><b>here's the actual thread:</b> a patient who quits a long-term therapy halfway. a 20-year-old who scrolls past a campaign in half a second. different worlds, same two questions for me: why did they <span class="nw"><span class="circ">leave<svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M64 5 C100 3 118 18 114 33 C110 51 72 57 42 55 C14 52 3 39 6 25 C9 11 38 4 80 7"></path></svg></span>,</span> and what would have made them <span class="nw"><span class="uline">stay<svg viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C14 2 25 11 38 6 S62 2 75 7 S91 10 98 5"></path></svg></span>?</span> i like answering both, and then <span class="hl">building the fix</span>.</p>
+      <div class="now enter" style="--d:1000ms">
+        <span class="meta"><strong>right now:</strong> decision analytics associate at zs associates, gurugram</span>
+        <span class="meta"><strong>on the side:</strong> idea pressure test &amp; applypilot</span>
+      </div>
+      <div class="ctas enter" style="--d:1080ms">
+        <a class="btn btn-primary" href="#built">see what i've built <span class="arr down" aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="#hi">say hi <span class="arr" aria-hidden="true">→</span></a>
+      </div>
     </div>
 
-    <div class="me">
+    <div class="me enter" style="--d:240ms">
       <div class="sticker">this is how i look.</div>
       <figure style="margin:0">
-        <div class="photo" data-slot="portrait"><img src="img/me2.jpg" alt="falaq grinning with arms crossed, wearing a pink and orange rajasthani turban and a black hoodie, against a blue wall" style="object-position: 50% 30%"></div>
-        <figcaption class="cap">and i think masti nahi rukni chahiye.</figcaption>
+        <div class="photo"><picture><source srcset="img/me2.webp" type="image/webp"><img src="img/me2.jpg" width="880" height="1100" fetchpriority="high" alt="falaq grinning with arms crossed, wearing a pink and orange rajasthani turban and a black hoodie, against a blue wall" style="object-position: 50% 30%"></picture></div>
+        <figcaption>and i think masti nahi rukni chahiye.</figcaption>
       </figure>
       <svg class="spark" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 2 C32 20 40 28 58 30 C40 32 32 40 30 58 C28 40 20 32 2 30 C20 28 28 20 30 2 Z"></path></svg>
     </div>
@@ -683,26 +102,27 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   </div>
 
   <!-- mixer -->
-  <section class="sec" id="mixer" aria-labelledby="mix-h" style="padding-top: 30px">
+  <section class="sec" id="mixer" aria-labelledby="mix-h" style="padding-top: var(--s7)">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">slide it</span><h2 id="mix-h">the falaq mixer</h2></div>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">slide it →</span><h2 id="mix-h">the falaq mixer</h2></div>
         <p>slide the crossfader. i'm a home dj who's still learning (my friends are the only crowd so far), so this felt like the most honest way to explain how i work during the week.</p>
       </div>
-      <div class="mixbox" id="mixbox" data-pop>
+      <div class="mixbox rv" id="mixbox">
         <div class="mix-grid">
           <div class="deck a" id="deckA">
-            <span class="tag">deck a</span>
+            <span class="meta">deck a</span>
             <h3>the analyst</h3>
             <p class="np">now playing: why patients drop off (zs mix)</p>
             <div class="meter" id="mA" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           </div>
           <div class="fader">
-            <input type="range" id="xf" min="0" max="100" value="50" step="1" aria-label="slide between the analyst and the operator" aria-valuetext="the mix">
-            <div class="fl"><span>← analyst</span><span>operator →</span></div>
+            <label class="sr-only" for="xf">slide between the analyst and the operator</label>
+            <input type="range" id="xf" min="0" max="100" value="50" step="1" aria-valuetext="the mix">
+            <div class="fl" aria-hidden="true"><span>← analyst</span><span>operator →</span></div>
           </div>
           <div class="deck b" id="deckB">
-            <span class="tag">deck b</span>
+            <span class="meta">deck b</span>
             <h3>the operator</h3>
             <p class="np">now playing: why crowds show up (live empire edit)</p>
             <div class="meter" id="mB" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -716,88 +136,86 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <!-- setlist -->
   <section class="sec" id="setlist" aria-labelledby="set-h">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">→ setlist</span><h2 id="set-h">the setlist so far</h2></div>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">→ setlist</span><h2 id="set-h">the setlist so far</h2></div>
         <p>four rooms, four completely different problems. each one handed me a question i couldn't put down.</p>
       </div>
 
-      <div class="tracks">
-        <article class="card trk lift" data-pop style="--nc: var(--sky)">
-          <div class="trk-meta">
-            <span class="lbl">track</span>
-            <span class="no">01</span>
-            <span class="when">2020 → 2024</span>
-            <span class="where">thapar, patiala</span>
-            <p class="role-l">bba, economics + marketing · overall student convener of the techno-cultural fest</p>
-          </div>
-          <div class="trk-main">
-            <span class="qk">the question</span>
-            <p class="q">how do you get 415 college students moving in one direction with zero formal authority?</p>
-            <ul class="blist">
+      <div class="timeline" id="timeline">
+        <span class="rail-fill" aria-hidden="true"></span>
+        <ol class="tl-list">
+
+        <li class="tl" style="--nc: var(--sky)">
+          <div class="tl-when"><span class="tl-no" aria-hidden="true">01</span><span class="tl-date">2020 → 2024</span></div>
+          <div class="tl-body">
+            <h3 class="tl-where">thapar, patiala</h3>
+            <p class="tl-role">bba, economics + marketing · overall student convener of the techno-cultural fest</p>
+            <p class="tl-q aside"><span class="meta">the question</span>how do you get 415 college students moving in one direction with zero formal authority?</p>
+            <ul class="facts">
               <li>ran the college's flagship techno-cultural fest as overall student convener in 2023, leading a 415-person volunteer machine across logistics, artists, sponsors and security.</li>
               <li>took fest sponsorships from ₹6.75 lakh (the year i headed marketing and external relations) to ₹24 lakh (the year i ran the fest), by ditching generic tier pdfs and pitching brands on actual student attention.</li>
-              <li>founded and led the campus chapter of feeding india.</li>
-              <li>made the national finals of iim indore's avant-garde business-plan competition in 2021 with a healthcare product concept. my first taste of building a business from scratch.</li>
             </ul>
-            <div class="stats">
-              <div class="stat" style="--sc: var(--sun-soft); --rot:-1.5deg"><span class="n" data-count="415">415</span><span class="l">volunteers, one shared deadline</span></div>
-              <div class="stat" style="--sc: var(--tang-soft); --rot:1deg"><span class="n">₹6.75L → ₹24L</span><span class="l">sponsorships, year on year</span></div>
-              <div class="stat" style="--sc: var(--mint-soft); --rot:-.8deg"><span class="n">national finalist</span><span class="l">iim indore b-plan '21</span></div>
-            </div>
+            <details class="more">
+              <summary>2 more from this track</summary>
+              <ul class="facts">
+                <li>founded and led the campus chapter of feeding india.</li>
+                <li>made the national finals of iim indore's avant-garde business-plan competition in 2021 with a healthcare product concept. my first taste of building a business from scratch.</li>
+              </ul>
+            </details>
+            <dl class="figures">
+              <div><dt data-count="415">415</dt><dd>volunteers, one shared deadline</dd></div>
+              <div><dt>₹6.75L → ₹24L</dt><dd>sponsorships, year on year</dd></div>
+              <div><dt>national finalist</dt><dd>iim indore b-plan '21</dd></div>
+            </dl>
           </div>
-        </article>
+        </li>
 
-        <article class="card trk lift" data-pop style="--nc: var(--mint-soft)">
-          <div class="trk-meta">
-            <span class="lbl">track</span>
-            <span class="no">02</span>
-            <span class="when">mar → aug 2024</span>
-            <span class="where">deesat (top one percent), bengaluru</span>
-            <p class="role-l">project management intern, founding team · an sat-prep edtech platform</p>
-          </div>
-          <div class="trk-main">
-            <span class="qk">the question</span>
-            <p class="q">what separates a course students buy from one they actually finish?</p>
-            <ul class="blist">
+        <li class="tl" style="--nc: var(--mint-soft)">
+          <div class="tl-when"><span class="tl-no" aria-hidden="true">02</span><span class="tl-date">mar → aug 2024</span></div>
+          <div class="tl-body">
+            <h3 class="tl-where">deesat (top one percent), bengaluru</h3>
+            <p class="tl-role">project management intern, founding team · an sat-prep edtech platform</p>
+            <p class="tl-q aside"><span class="meta">the question</span>what separates a course students buy from one they actually finish?</p>
+            <ul class="facts">
               <li>helped shape the core sat curriculum, figuring out which study material actually moves a student's score versus what just adds noise.</li>
               <li>tore down competitor platforms to find the exact friction points where students were getting stuck or losing momentum.</li>
               <li>worked with the lms design team on navigation and ui/ux, then stress-tested the portal end to end before launch.</li>
             </ul>
-            <div class="stats">
-              <div class="stat" style="--sc: var(--sky); --rot:1.2deg"><span class="n">0 → 1</span><span class="l">founding team build</span></div>
-              <div class="stat" style="--sc: var(--sun-soft); --rot:-1deg"><span class="n">lms + curriculum</span><span class="l">ux, content &amp; end-to-end testing</span></div>
-            </div>
+            <dl class="figures">
+              <div><dt>0 → 1</dt><dd>founding team build</dd></div>
+              <div><dt>lms + curriculum</dt><dd>ux, content &amp; end-to-end testing</dd></div>
+            </dl>
           </div>
-        </article>
+        </li>
 
-        <article class="card trk lift" data-pop style="--nc: var(--tang-soft)">
-          <div class="trk-meta">
-            <span class="lbl">track</span>
-            <span class="no">03</span>
-            <span class="when">aug 2024 → jun 2025</span>
-            <span class="where">live empire entertainment</span>
-            <p class="role-l">project management executive · live entertainment, cosa nostra live &amp; cn clan</p>
-          </div>
-          <div class="trk-main">
-            <span class="qk">the question</span>
-            <p class="q">why does one cultural moment catch fire while another dies in the feed?</p>
-            <ul class="blist">
-              <li>studied how our 17–25-year-old audience across india thought about music, status and community, and turned those insights into personas, campaigns, communities (cn clan) and new product channels.</li>
+        <li class="tl" style="--nc: var(--tang-soft)">
+          <div class="tl-when"><span class="tl-no" aria-hidden="true">03</span><span class="tl-date">aug 2024 → jun 2025</span></div>
+          <div class="tl-body">
+            <h3 class="tl-where">live empire entertainment</h3>
+            <p class="tl-role">project management executive · live entertainment, cosa nostra live &amp; cn clan</p>
+            <p class="tl-q aside"><span class="meta">the question</span>why does one cultural moment catch fire while another dies in the feed?</p>
+            <ul class="facts">
               <li>ran social and community for cosa nostra live, scaling average reach from 250k to 2.2m in four months through tight audience hooks rather than viral luck.</li>
               <li>brought in ~₹38 lakh in revenue: ₹32 lakh from artist-show sales and ₹5.5 lakh in sponsorships across two end-to-end btl brand activations.</li>
               <li>executed 11 live shows on the ground while annual company bookings jumped from ~30 to 125 shows, fuelled in part by inbound social leads.</li>
-              <li>co-designed festpass (alongside an offline networking channel and an event-accessibility concept) to fix the broken college-fest circuit.</li>
             </ul>
-            <div class="stats">
-              <div class="stat" style="--sc: var(--sun); --rot:-1.4deg"><span class="n">250k → 2.2m</span><span class="l">average reach in four months</span></div>
-              <div class="stat" style="--sc: var(--sun-soft); --rot:1deg"><span class="n" data-count="38" data-pre="₹" data-suf=" lakh">₹38 lakh</span><span class="l">revenue brought in</span></div>
-              <div class="stat" style="--sc: var(--mint-soft); --rot:-.6deg"><span class="n">~30 → 125</span><span class="l">annual show bookings</span></div>
-              <div class="stat" style="--sc: var(--sky); --rot:1.6deg"><span class="n" data-count="11">11</span><span class="l">live shows run end to end</span></div>
-            </div>
+            <details class="more">
+              <summary>2 more from this track</summary>
+              <ul class="facts">
+                <li>studied how our 17–25-year-old audience across india thought about music, status and community, and turned those insights into personas, campaigns, communities (cn clan) and new product channels.</li>
+                <li>co-designed festpass (alongside an offline networking channel and an event-accessibility concept) to fix the broken college-fest circuit.</li>
+              </ul>
+            </details>
+            <dl class="figures">
+              <div><dt>250k → 2.2m</dt><dd>average reach in four months</dd></div>
+              <div><dt data-count="38" data-pre="₹" data-suf=" lakh">₹38 lakh</dt><dd>revenue brought in</dd></div>
+              <div><dt>~30 → 125</dt><dd>annual show bookings</dd></div>
+              <div><dt data-count="11">11</dt><dd>live shows run end to end</dd></div>
+            </dl>
             <div class="extra">
-              <a class="reel" href="https://www.instagram.com/reel/DG974eTR_wG/" target="_blank" rel="noopener"><span class="reel-play" aria-hidden="true">▶</span><span class="reel-t">watch a reel on instagram ↗</span></a>
+              <a class="reel" href="https://www.instagram.com/reel/DG974eTR_wG/" target="_blank" rel="noopener"><span class="reel-play" aria-hidden="true">▶</span><span class="reel-t">watch a reel on instagram <span class="ext" aria-hidden="true"></span></span><span class="sr-only">(opens in a new tab)</span></a>
               <div class="fp">
-                <div class="fp-row" aria-label="festpass connects colleges and students on one rail">
+                <div class="fp-row" role="img" aria-label="festpass connects colleges and students on one rail">
                   <div class="fp-node"><b>colleges</b><span>verified fest leads, artist bookings &amp; ticketing in one rail</span></div>
                   <span class="fp-link" aria-hidden="true"></span>
                   <div class="fp-hub">festpass</div>
@@ -808,34 +226,35 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
               </div>
             </div>
           </div>
-        </article>
+        </li>
 
-        <article class="card trk lift" data-pop style="--nc: var(--sun-soft)">
-          <div class="trk-meta">
-            <span class="lbl">track</span>
-            <span class="no">04</span>
-            <span class="when">jun 2025 → now</span>
-            <span class="where">zs associates, gurugram</span>
-            <p class="role-l">decision analytics associate · real-world evidence for a global pharma client</p>
-          </div>
-          <div class="trk-main">
-            <span class="qk">the question</span>
-            <p class="q">what happens in the quiet gap between a patient starting treatment and suddenly stopping it?</p>
-            <ul class="blist">
+        <li class="tl" style="--nc: var(--sun)">
+          <div class="tl-when"><span class="tl-no" aria-hidden="true">04</span><span class="tl-date">jun 2025 → now</span><span class="tl-now">● current role</span></div>
+          <div class="tl-body">
+            <h3 class="tl-where">zs associates, gurugram</h3>
+            <p class="tl-role">decision analytics associate · real-world evidence for a global pharma client</p>
+            <p class="tl-q aside"><span class="meta">the question</span>what happens in the quiet gap between a patient starting treatment and suddenly stopping it?</p>
+            <ul class="facts">
               <li>own longitudinal analyses end to end: from framing the business question and exploring raw tables to spotting anomalies, deciding what to pull on next, and delivering the narrative.</li>
-              <li>stitch together fragmented patient-support-program, specialty-pharmacy and claims datasets in sql and snowflake so thousands of scattered records become clean patient-level timelines.</li>
-              <li>co-developed the client's rules for measuring persistence, compliance and discontinuation against published research, then stress-tested how sensitive the final numbers are when you tweak a definition.</li>
               <li>uncovered a pattern of patients dropping off treatment after a stable stretch on therapy, which shifted the client's strategic focus toward discontinuation and what drives it.</li>
-              <li>built the quarterly tracking report the client's stakeholders use to follow their drug, and automated recurring reporting and data quality-control checks using agentic ai workflows.</li>
               <li>contributed analyses to a ~1,000-patient real-world evidence study presented at a medical conference, with follow-up work now heading toward a manuscript.</li>
             </ul>
-            <div class="stats">
-              <div class="stat" style="--sc: var(--mint-soft); --rot:1deg"><span class="n" data-count="1000" data-pre="~">~1,000</span><span class="l">patients in a conference-presented study</span></div>
-              <div class="stat" style="--sc: var(--tang-soft); --rot:-1.2deg"><span class="n">3 data worlds</span><span class="l">support programs, pharmacy &amp; claims</span></div>
-              <div class="stat" style="--sc: var(--sun); --rot:.8deg"><span class="n">agentic qc</span><span class="l">automated pipeline &amp; reporting checks</span></div>
-            </div>
+            <details class="more">
+              <summary>3 more from this track</summary>
+              <ul class="facts">
+                <li>stitch together fragmented patient-support-program, specialty-pharmacy and claims datasets in sql and snowflake so thousands of scattered records become clean patient-level timelines.</li>
+                <li>co-developed the client's rules for measuring persistence, compliance and discontinuation against published research, then stress-tested how sensitive the final numbers are when you tweak a definition.</li>
+                <li>built the quarterly tracking report the client's stakeholders use to follow their drug, and automated recurring reporting and data quality-control checks using agentic ai workflows.</li>
+              </ul>
+            </details>
+            <dl class="figures">
+              <div><dt data-count="1000" data-pre="~">~1,000</dt><dd>patients in a conference-presented study</dd></div>
+              <div><dt>3 data worlds</dt><dd>support programs, pharmacy &amp; claims</dd></div>
+              <div><dt>agentic qc</dt><dd>automated pipeline &amp; reporting checks</dd></div>
+            </dl>
           </div>
-        </article>
+        </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -843,29 +262,37 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <!-- built -->
   <section class="sec" id="built" aria-labelledby="built-h">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">→ built</span><h2 id="built-h">things i've built</h2></div>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">→ built</span><h2 id="built-h">things i've built</h2></div>
         <p>nights and weekends. usually starts with a workflow that annoys me or a question that won't leave me alone.</p>
       </div>
-      <div class="bento">
-        <article class="card proj b-ipt lift" data-pop>
+      <div class="legend meta" aria-hidden="true"><span><i style="--c: var(--sun)"></i>working prototype</span><span><i style="--c: var(--mint-soft)"></i>open source</span><span><i style="--c: var(--tang)"></i>exploration</span></div>
+
+      <div class="projects">
+        <article class="proj p-ipt rv" aria-labelledby="ipt-h">
           <div class="feat">
             <div class="feat-txt">
-              <h3>idea pressure test</h3>
+              <div class="p-head"><span class="status"><i style="--c: var(--sun)"></i>working prototype</span><span class="status"><i style="--c: var(--pop-card)"></i>bring your own ai key</span></div>
+              <h3 id="ipt-h">idea pressure test</h3>
               <p class="one">a web app that grills your startup idea before you fall in love with your own pitch deck.</p>
               <div class="minis"><span>16 questions</span><span>13 evaluations</span><span>7 lenses</span><span>35/30/35</span></div>
               <p>16 uncomfortable questions across three phases (the guru test, the founder test, the reality test) backed by 13 evaluations drawn from seven startup lenses: hormozi, graham, altman, thiel, the amodeis, naval and demand-first.</p>
               <p>each lens scores the idea out of 10 as trash, contender or jackpot. weighted 35/30/35 across phases, it hands you a blunt verdict (build it, pivot it or bin it) plus a concrete 30-day execution plan if it survives.</p>
-              <p class="byok"><b>bring your own ai</b>runs on gemini (free), openai or claude. you paste your own key, and it stays in your browser.</p>
+              <dl class="kv">
+                <dt>runs on</dt><dd>gemini (free), openai or claude. you paste your own key, and it stays in your browser.</dd>
+                <dt>my role</dt><dd>i built it.</dd>
+                <dt>next</dt><dd>not hosted publicly yet. happy to walk you through it.</dd>
+              </dl>
+              <div class="p-actions"><a class="btn btn-primary" href="#hi">ask for a walkthrough <span class="arr" aria-hidden="true">→</span></a></div>
             </div>
             <div class="feat-vis">
-              <figure class="ipt-shot">
-                <div class="ipt-bar" aria-hidden="true"><i></i><i></i><i></i><span>idea pressure test</span></div>
-                <img src="img/ipt.jpg" alt="the idea pressure test start screen: 16 questions, 3 phases, 7 frameworks, and a start the test button" width="960" height="600" loading="lazy">
+              <figure class="shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>idea pressure test</span></div>
+                <div class="shot-img"><picture><source srcset="img/ipt.webp" type="image/webp"><img src="img/ipt.jpg" width="960" height="600" loading="lazy" alt="the idea pressure test start screen: 16 questions, 3 phases, 7 frameworks, and a start the test button"></picture></div>
               </figure>
               <div class="grill" data-grill>
                 <span class="grill-h">try one question from each phase ↓</span>
-                <div class="grill-tabs">
+                <div class="grill-tabs" role="group" aria-label="pick a phase">
                   <button type="button" data-g="0" aria-pressed="true">01 guru</button>
                   <button type="button" data-g="1" aria-pressed="false">02 founder</button>
                   <button type="button" data-g="2" aria-pressed="false">03 reality</button>
@@ -881,20 +308,25 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
         </article>
 
-        <article class="card proj b-ap lift" data-pop>
+        <article class="proj p-ap rv" aria-labelledby="ap-h">
           <div class="feat">
             <div class="feat-txt">
-              <h3>applypilot</h3>
+              <div class="p-head"><span class="status"><i style="--c: var(--mint-soft)"></i>open source</span><span class="status"><i style="--c: var(--sun)"></i>claude plugin</span></div>
+              <h3 id="ap-h">applypilot</h3>
               <p class="one">a multi-agent job-hunting engine that refuses to lie for you.</p>
               <div class="minis"><span>9 agents</span><span>24 scripts</span><span>375 tests</span><span>never hits submit</span></div>
               <p>a system a few friends and i built to take the repetitive admin out of job hunting. 9 agents search job boards in parallel, score role fit, tailor resumes, prep interview briefs and draft outreach, while a shared sheet tracks the pipeline.</p>
-              <p>the core constraint: automation shouldn't make you dishonest. nothing goes onto a draft unless it already exists in your ground-truth history, and an independent auditor agent checks every single resume before you see it. 9 agents, 24 scripts, 375 automated tests, and it never hits submit for you.</p>
-              <a class="btn-link" href="https://github.com/falaq18/Claude-JobAI" target="_blank" rel="noopener">peek at the code on github ↗</a>
+              <p>the core constraint: automation shouldn't make you dishonest. nothing goes onto a draft unless it already exists in your ground-truth history, and an independent auditor agent checks every single resume before you see it.</p>
+              <dl class="kv">
+                <dt>my role</dt><dd>built it with a few friends.</dd>
+                <dt>next</dt><dd>the code is public on github.</dd>
+              </dl>
+              <div class="p-actions"><a class="btn btn-primary" href="https://github.com/falaq18/Claude-JobAI" target="_blank" rel="noopener">peek at the code on github <span class="ext" aria-hidden="true"></span><span class="sr-only">(opens in a new tab)</span></a></div>
             </div>
             <div class="feat-vis">
               <div class="apf-box">
-                <span class="apf-h">how one job moves through it</span>
-                <ol class="apf">
+                <span class="meta" style="color: inherit; opacity: .8">how one job moves through it</span>
+                <ol class="apf" id="apf">
                   <li><b>search</b><span>agents scan job boards in parallel</span></li>
                   <li><b>score</b><span>how well does this role actually fit?</span></li>
                   <li><b>draft</b><span>tailored resume, interview brief, outreach. only from your real history.</span></li>
@@ -907,11 +339,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
         </article>
 
-        <article class="card proj b-prop" data-pop>
+        <article class="proj p-prop rv" aria-labelledby="prop-h">
           <div class="prop-grid">
             <div class="prop-main">
-              <span class="wb-k">on the whiteboard · not building it right now, but it's the thesis i talk to people about</span>
-              <h3>property, tokenised</h3>
+              <div class="p-head"><span class="status"><i style="--c: var(--tang)"></i>exploration</span><span class="status">on the whiteboard · not building it right now</span></div>
+              <h3 id="prop-h">property, tokenised</h3>
               <p class="one">dual-arm fractional real estate: from co-owning luxury vacation villas and commercial land to programmable ownership rails in india.</p>
               <div class="pivot">
                 <div class="pv"><b>v1 · fix co-ownership offline first</b><p>multiple investors co-own high-yield vacation villas or commercial land parcels through a clean legal structure. the platform runs the unglamorous stuff first: spv records, rental yield splits, maintenance reserves, co-owner voting and secondary exits.</p></div>
@@ -919,6 +351,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
                 <div class="pv v2"><b>v2 · tokenisation</b><p>legally enforceable spv equity or rental rights get represented as permissioned digital tokens, so transfers, cap-table updates and compliance checks happen cleanly on-chain where the law allows.</p></div>
               </div>
               <p class="rules">non-negotiables: no speculative coin, no fake "instant liquidity" promises, no guaranteed returns. legal enforceability before code.</p>
+              <dl class="kv">
+                <dt>my role</dt><dd>it's the thesis i talk to people about.</dd>
+              </dl>
+              <div class="p-actions"><a class="btn btn-ghost" href="#hi">talk to me about it <span class="arr" aria-hidden="true">→</span></a></div>
             </div>
             <div class="qs">
               <h4>the questions i keep turning over</h4>
@@ -932,16 +368,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             </div>
           </div>
         </article>
+      </div>
 
-        <div class="card b-pile" data-pop>
-          <div class="pile-h"><h3>the idea pile</h3></div>
-          <div class="pile-grid">
-            <div class="idea" style="--ic: var(--tang-soft)"><span class="lab">earlier venture</span><b>kalatmak furnishers</b><p>a construction, custom furniture and interiors business. my ground-level education in offline supply chains, contractors and physical margins.</p></div>
-            <div class="idea" style="--ic: var(--mint-soft)"><span class="lab">earlier build</span><b>mess meal &amp; management tracker</b><p>a qr-driven system built to fix meal tracking, attendance and food wastage across campus dining halls.</p></div>
-            <div class="idea" style="--ic: var(--sun-soft)"><span class="lab">product concept</span><b>experimental dessert formats (gurugram)</b><p>r&amp;d and standard operating procedures for cryogenic ice cream chips and thick-cut ice cream cubes (tiramisu, biscoff cheesecake, dark chocolate sea salt).</p></div>
-            <div class="idea" style="--ic: var(--sky)"><span class="lab">product concept</span><b>live-event networking &amp; accessibility rails</b><p>two product channels scoped during my time in live entertainment: one for structured offline networking at gigs, one for personalized event accessibility.</p></div>
-          </div>
-        </div>
+      <div class="pile rv">
+        <h3>the idea pile</h3>
+        <ul>
+          <li><span class="meta">earlier venture</span><b>kalatmak furnishers</b><p>a construction, custom furniture and interiors business. my ground-level education in offline supply chains, contractors and physical margins.</p></li>
+          <li><span class="meta">earlier build</span><b>mess meal &amp; management tracker</b><p>a qr-driven system built to fix meal tracking, attendance and food wastage across campus dining halls.</p></li>
+          <li><span class="meta">product concept</span><b>experimental dessert formats (gurugram)</b><p>r&amp;d and standard operating procedures for cryogenic ice cream chips and thick-cut ice cream cubes (tiramisu, biscoff cheesecake, dark chocolate sea salt).</p></li>
+          <li><span class="meta">product concept</span><b>live-event networking &amp; accessibility rails</b><p>two product channels scoped during my time in live entertainment: one for structured offline networking at gigs, one for personalized event accessibility.</p></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -949,20 +385,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <!-- brain -->
   <section class="sec" id="brain" aria-labelledby="brain-h">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">→ my brain</span><h2 id="brain-h">how my brain works</h2></div>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">→ my brain</span><h2 id="brain-h">how my brain works</h2></div>
         <p>no framework. just how i tend to think.</p>
       </div>
 
       <div class="mind">
-        <figure class="card browser" data-pop>
+        <figure class="browser rv">
           <div class="b-bar"><span class="b-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="b-url">falaq.brain / how-i-think</span></div>
           <div class="b-tabs" role="tablist" aria-label="how i usually think">
-            <button type="button" role="tab" id="bt1" data-k="1" aria-selected="true" style="--tc: var(--tang-soft)">people</button>
-            <button type="button" role="tab" id="bt2" data-k="2" aria-selected="false" tabindex="-1" style="--tc: var(--sky)">notice → connect</button>
-            <button type="button" role="tab" id="bt3" data-k="3" aria-selected="false" tabindex="-1" style="--tc: var(--mint-soft)">zoom out</button>
-            <button type="button" role="tab" id="bt4" data-k="4" aria-selected="false" tabindex="-1" style="--tc: var(--sun-soft)">build</button>
-            <button type="button" role="tab" id="bt5" data-k="5" aria-selected="false" tabindex="-1" style="--tc: var(--sky)">break it</button>
+            <button type="button" role="tab" id="bt1" data-k="1" aria-selected="true" aria-controls="bview" style="--tc: var(--tang-soft)">people</button>
+            <button type="button" role="tab" id="bt2" data-k="2" aria-selected="false" aria-controls="bview" tabindex="-1" style="--tc: var(--sky)">notice → connect</button>
+            <button type="button" role="tab" id="bt3" data-k="3" aria-selected="false" aria-controls="bview" tabindex="-1" style="--tc: var(--mint-soft)">zoom out</button>
+            <button type="button" role="tab" id="bt4" data-k="4" aria-selected="false" aria-controls="bview" tabindex="-1" style="--tc: var(--sun-soft)">build</button>
+            <button type="button" role="tab" id="bt5" data-k="5" aria-selected="false" aria-controls="bview" tabindex="-1" style="--tc: var(--sky)">break it</button>
             <span class="b-more" aria-hidden="true">+ too many tabs</span>
           </div>
           <div class="b-view" role="tabpanel" aria-labelledby="bt1" id="bview">
@@ -999,7 +435,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <figcaption>my brain, with too many tabs open.</figcaption>
         </figure>
 
-        <div class="beliefs">
+        <div class="beliefs rv d1">
           <h3>how i usually think</h3>
           <ul class="blf">
             <li data-k="1" style="--c: var(--tang)"><p><b>i start with people.</b> before i look at a product or a number, i want to know who it's for and what they actually feel.</p></li>
@@ -1009,7 +445,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <li data-k="5" style="--c: var(--sky)"><p><b>i try to break my own ideas first.</b> if an idea can't survive my own questions, it isn't ready for anyone else's.</p></li>
           </ul>
           <div class="curious">
-            <p class="art-k">things i keep coming back to</p>
+            <span class="meta">things i keep coming back to</span>
             <ul class="chips">
               <li>how young indians think about status and identity</li>
               <li>platforms and communities</li>
@@ -1026,22 +462,21 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <!-- rabbit holes -->
   <section class="sec" id="holes" aria-labelledby="holes-h">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">→ rabbit holes</span><h2 id="holes-h">rabbit holes</h2></div>
-        <p>deep dives i went down because standard explanations felt lazy. some became frameworks i use to look at markets; some turned into software.</p>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">→ rabbit holes</span><h2 id="holes-h">rabbit holes</h2></div>
+        <p>deep dives i went down because standard explanations felt lazy. one became a framework i use to look at markets; one turned into software.</p>
       </div>
 
-      <article class="card hole" data-pop style="--hc: var(--sun-soft)">
-        <span class="hole-no">rabbit hole 01 · the big one</span>
-        <h3>the income ladder &amp; the consumption cascade</h3>
+      <article class="hole" style="--hc: var(--sun-soft)" aria-labelledby="h1-h">
+        <div class="hole-head rv"><span class="hole-no"><span>01 · the big one</span></span><h3 id="h1-h">the income ladder &amp; the consumption cascade</h3></div>
         <div class="hole-grid">
-          <div>
-            <p class="hq"><span class="k">it started with</span>the standard economist take: when countries cross a certain gdp per capita, consumption explodes. just look at china, south korea, japan and taiwan.</p>
-            <p class="hq"><span class="k">my objection</span>why are we talking about countries as averages? india already has every income bracket living side by side right now: someone earning ₹10,000 a month, a software engineer on ₹2 lakh, a founder on ₹20 lakh. the future of india isn't hiding in another country's past. it's already visible in how richer indians spend today.</p>
-            <p class="hq"><span class="k">the better question</span>instead of asking "what do people buy as they get richer?", ask: "which single purchase sets off a chain reaction?"</p>
+          <div class="rv">
+            <p class="hq"><span class="meta">it started with</span>the standard economist take: when countries cross a certain gdp per capita, consumption explodes. just look at china, south korea, japan and taiwan.</p>
+            <p class="hq"><span class="meta">my objection</span>why are we talking about countries as averages? india already has every income bracket living side by side right now: someone earning ₹10,000 a month, a software engineer on ₹2 lakh, a founder on ₹20 lakh. the future of india isn't hiding in another country's past. it's already visible in how richer indians spend today.</p>
+            <p class="hq"><span class="meta">the better question</span>instead of asking "what do people buy as they get richer?", ask: "which single purchase sets off a chain reaction?"</p>
           </div>
           <div>
-            <p class="art-k">income ↑ · read it bottom to top</p>
+            <span class="meta art-k">income ↑ · read it bottom to top</span>
             <div class="ladder">
               <div class="rung" style="--rc: var(--sun); --off: 24%"><span class="lv">5</span><span><span class="nm">experience</span><span class="qq">the value is memory, access and identity, not utility</span><span class="eg">travel, wellness, fine dining, luxury</span></span></div>
               <div class="rung" style="--rc: var(--mint-soft); --off: 18%"><span class="lv">4</span><span><span class="nm">convenience</span><span class="qq">"is my time worth more than the fee?"</span><span class="eg">blinkit, instamart, urban company, premium healthcare</span></span></div>
@@ -1051,7 +486,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             </div>
           </div>
           <div class="wide">
-            <p class="art-k">one anchor purchase, then the mandatory chain reaction</p>
+            <span class="meta art-k">one anchor purchase, then the mandatory chain reaction</span>
             <div class="chain" aria-label="iphone, then airpods, apple watch, macbook, icloud, apple pay, subscriptions"><span class="p anc">iphone</span><span class="ar">→</span><span class="p">airpods</span><span class="ar">→</span><span class="p">apple watch</span><span class="ar">→</span><span class="p">macbook</span><span class="ar">→</span><span class="p">icloud</span><span class="ar">→</span><span class="p">apple pay</span><span class="ar">→</span><span class="p">subscriptions</span></div>
             <div class="chain" aria-label="a 40 lakh flat to a 1.5 crore apartment, then interior designer, custom furniture, modular kitchen, luxury lighting, smart locks, housekeeping, international schools nearby"><span class="p anc">₹40L flat → ₹1.5Cr apartment</span><span class="ar">→</span><span class="p">interior designer</span><span class="ar">→</span><span class="p">custom furniture</span><span class="ar">→</span><span class="p">modular kitchen</span><span class="ar">→</span><span class="p">luxury lighting</span><span class="ar">→</span><span class="p">smart locks</span><span class="ar">→</span><span class="p">housekeeping</span><span class="ar">→</span><span class="p">international schools nearby</span></div>
             <div class="notes">
@@ -1059,33 +494,32 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
               <div class="nt" style="--nc: var(--tang-soft); --rot:1.2deg"><b>diderot effect</b><p>one upgrade makes everything else you own look out of place. your identity demands coherence.</p></div>
               <div class="nt" style="--nc: var(--sun); --rot:-.8deg"><b>the core unlock</b><p>consumers don't upgrade products. they upgrade identities.</p></div>
             </div>
-            <p class="art-k">where i landed</p>
+            <span class="meta art-k">where i landed</span>
             <div class="chain land" aria-label="income rises, identity expands, anchor purchase, consumption cascade, lifestyle locks in, permanent spending floor rises"><span class="p">income rises</span><span class="ar">→</span><span class="p">identity expands</span><span class="ar">→</span><span class="p">anchor purchase</span><span class="ar">→</span><span class="p">consumption cascade</span><span class="ar">→</span><span class="p">lifestyle locks in</span><span class="ar">→</span><span class="p">permanent spending floor rises</span></div>
-            <p class="closer">that's why consumption in india doesn't grow in a polite straight line. it steps up in cascades.</p>
+            <p class="closer aside">that's why consumption in india doesn't grow in a polite straight line. it steps up in cascades.</p>
           </div>
         </div>
       </article>
 
-      <article class="card hole" data-pop style="--hc: var(--sky)">
-        <span class="hole-no">rabbit hole 02</span>
-        <h3>the founder-fit multiplier</h3>
+      <article class="hole" style="--hc: var(--sky)" aria-labelledby="h2-h">
+        <div class="hole-head rv"><span class="hole-no"><span>02</span></span><h3 id="h2-h">the founder-fit multiplier</h3></div>
         <div class="hole-grid">
-          <div>
-            <p class="hq"><span class="k">it started with</span>while designing a system to evaluate startup ideas, i hit a wall: most vc frameworks obsess over market size. yet mediocre ideas routinely make millions while brilliant ideas die every week. why?</p>
-            <p class="hq"><span class="k">the insight</span>because evaluating an idea in a vacuum is useless. same idea, different founder, completely different probability of survival. so i took the best market &amp; product filters: graham (desperate need), thiel (contrarian truth), hormozi (immediate willingness to pay), naval (leverage) and altman (scale). then i bolted on the missing variable: founder fit.</p>
-            <p class="landed"><span class="k">where it went</span>this became the backbone of idea pressure test, where 30% of the entire score comes down to the founder test.</p>
+          <div class="rv">
+            <p class="hq"><span class="meta">it started with</span>while designing a system to evaluate startup ideas, i hit a wall: most vc frameworks obsess over market size. yet mediocre ideas routinely make millions while brilliant ideas die every week. why?</p>
+            <p class="hq"><span class="meta">the insight</span>because evaluating an idea in a vacuum is useless. same idea, different founder, completely different probability of survival. so i took the best market &amp; product filters: graham (desperate need), thiel (contrarian truth), hormozi (immediate willingness to pay), naval (leverage) and altman (scale). then i bolted on the missing variable: founder fit.</p>
+            <p class="landed"><span class="meta">where it went</span>this became the backbone of idea pressure test, where 30% of the entire score comes down to the founder test.</p>
           </div>
-          <div>
+          <div class="rv d1">
             <p class="eq"><span>outcome</span><span class="op">=</span><span class="circ">idea<svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M64 5 C100 3 118 18 114 33 C110 51 72 57 42 55 C14 52 3 39 6 25 C9 11 38 4 80 7"></path></svg></span><span class="op">×</span><span>founder</span><span class="op">×</span><span>timing</span></p>
             <p class="eq-note">↑ most pitch feedback only scores the first variable</p>
-            <p class="idea-k">idea: an ai compliance copilot for hospitals</p>
+            <p class="idea-k meta">idea: an ai compliance copilot for hospitals</p>
             <div class="vs">
               <div class="fd" style="--fc: var(--mint-soft)"><b>founder a</b><p>ex-pharma doctor with a 50-hospital network</p></div>
               <div class="fd" style="--fc: var(--tang-soft)"><b>founder b</b><p>generalist software engineer who read an article about healthcare last week</p></div>
               <span class="vs-badge" aria-hidden="true">vs</span>
             </div>
-            <p class="odds">exact same deck. completely different odds.</p>
-            <p class="art-k">founder fit asks</p>
+            <p class="odds aside">exact same deck. completely different odds.</p>
+            <span class="meta art-k">founder fit asks</span>
             <ul class="asks"><li>earned domain insight?</li><li>irrational obsession?</li><li>unfair distribution advantage?</li><li>network access?</li><li>day-one credibility?</li></ul>
           </div>
         </div>
@@ -1093,92 +527,78 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </section>
 
-  <!-- background -->
-  <section class="sec" id="background" aria-labelledby="bg-h">
+  <!-- off the clock -->
+  <section class="sec" id="off" aria-labelledby="bg-h">
     <div class="wrap">
-      <div class="sec-h">
-        <div><span class="kick">→ off the clock</span><h2 id="bg-h">always running in the background</h2></div>
-        <p class="bg-q">an emptying dance floor is just a retention curve with better lighting.</p>
+      <div class="sec-h rv">
+        <div><span class="eyebrow">→ off the clock</span><h2 id="bg-h">always running in the background</h2></div>
+        <p class="aside">an emptying dance floor is just a retention curve with better lighting.</p>
       </div>
       <ul class="pgrid">
-        <li class="pc" data-pop style="--rot:-2.5deg">
-          <div class="photo" data-slot="dj"><img src="img/dj.jpg" alt="falaq at his home dj setup with a laptop and a red cup, lit in blue" loading="lazy"></div>
+        <li class="pc rv" style="--rot:-2.5deg">
+          <div class="photo"><picture><source srcset="img/dj.webp" type="image/webp"><img src="img/dj.jpg" width="528" height="661" loading="lazy" alt="falaq at his home dj setup with a laptop and a red cup, lit in blue"></picture></div>
           <h3>home decks</h3><p>a home dj, still learning phrasing, eq and how to make a mix breathe. my friends are the only crowd so far.</p>
         </li>
-        <li class="pc" data-pop style="--rot:2deg">
-          <div class="photo" data-slot="concerts"><img src="img/concert.jpg" alt="two artists on stage under green and purple lights" loading="lazy"></div>
+        <li class="pc rv d1" style="--rot:2deg">
+          <div class="photo"><picture><source srcset="img/concert.webp" type="image/webp"><img src="img/concert.jpg" width="600" height="800" loading="lazy" alt="two artists on stage under green and purple lights"></picture></div>
           <h3>both sides of the stage</h3><p>from losing my voice in the crowd to running 11 live shows behind the barrier.</p>
         </li>
-        <li class="pc" data-pop style="--rot:-1.5deg">
+        <li class="pc rv" style="--rot:-1.5deg">
           <span class="sticker">relax, it's fake blood.</span>
-          <div class="photo" data-slot="movie"><img src="img/movie.jpg" alt="falaq on set of san84: justice, in a turban with fake blood makeup" loading="lazy"></div>
+          <div class="photo"><picture><source srcset="img/movie.webp" type="image/webp"><img src="img/movie.jpg" width="600" height="750" loading="lazy" alt="falaq on set of san84: justice, in a turban with fake blood makeup"></picture></div>
           <h3>the plot twist</h3><p>acted in a movie once: <em>san84: justice</em>. you can rent it on amazon prime video. still my best two-truths-and-a-lie card.</p>
         </li>
-        <li class="pc" data-pop style="--rot:2.5deg">
-          <div class="photo" data-slot="ladakh"><img src="img/ladakh.jpg" alt="falaq standing by an empty mountain road in ladakh under heavy clouds" loading="lazy"></div>
+        <li class="pc rv d1" style="--rot:2.5deg">
+          <div class="photo"><picture><source srcset="img/ladakh.webp" type="image/webp"><img src="img/ladakh.jpg" width="600" height="800" loading="lazy" alt="falaq standing by an empty mountain road in ladakh under heavy clouds"></picture></div>
           <h3>high altitude, zero signal</h3><p>keylong → sarchu → tso moriri → leh. some routes are better without a spreadsheet.</p>
         </li>
       </ul>
+
       <div class="roll">
-        <p class="art-k">from the camera roll</p>
-        <ul class="roll-g">
-          <li style="--rot:-2deg"><img src="img/thar.jpg" alt="falaq's thar parked beside a herd of goats on a rocky mountain slope" loading="lazy"></li>
-          <li style="--rot:2deg"><img src="img/friends.jpg" alt="falaq smiling with friends outside a building at night" loading="lazy"></li>
-        </ul>
+        <div>
+          <span class="meta art-k">from the camera roll</span>
+          <ul class="roll-g">
+            <li style="--rot:-2deg"><picture><source srcset="img/thar.webp" type="image/webp"><img src="img/thar.jpg" width="600" height="800" loading="lazy" alt="falaq's thar parked beside a herd of goats on a rocky mountain slope"></picture></li>
+            <li style="--rot:2deg"><picture><source srcset="img/friends.webp" type="image/webp"><img src="img/friends.jpg" width="600" height="800" loading="lazy" alt="falaq smiling with friends outside a building at night"></picture></li>
+          </ul>
+        </div>
+        <div>
+          <span class="meta art-k">field notes · what else is running</span>
+          <ul class="notes-list">
+            <li style="--lc: var(--sun)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 24 C12 18 17 16 23 17 L37 17 C43 16 48 18 48 24 L51 37 C52 44 45 46 41 41 L38 36 L22 36 L19 41 C15 46 8 44 9 37 Z"></path><path d="M19 23 V31 M15 27 H23"></path><circle cx="39" cy="24" r="1.8"></circle><circle cx="43" cy="29" r="1.8"></circle></svg></span><b>fc / fifa, high line only</b><p>attacking football on xbox, usually fc barcelona.</p></li>
+            <li style="--lc: var(--tang-soft)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M18 36 C10 36 7 46 13 51 C19 56 31 55 35 48 C38 43 37 37 32 35 C34 29 29 25 24 27 C19 29 21 34 18 36 Z"></path><path d="M30 34 L50 12"></path><path d="M48 9 L54 5 L57 9 L52 14 Z"></path><circle cx="23" cy="43" r="3.5"></circle></svg></span><b>electric &amp; acoustic</b><p>i play electric and acoustic guitar, and i know a few good songs to jam.</p></li>
+            <li style="--lc: var(--mint-soft)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 50 L36 20 L42 24.5 L21 54 Z"></path><path d="M36 20 L41 12 L46 15.5 L42 24.5"></path><circle cx="47" cy="44" r="6"></circle><path d="M42.5 41 C45 43 46 46 45.5 49.5"></path></svg></span><b>cricket</b><p>always ready to debate a test match collapse or a questionable selection call.</p></li>
+            <li style="--lc: var(--sun-soft)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="24" cy="36" r="14"></circle><path d="M38 36 L56 34"></path><path d="M18 16 C16 12 20 10 18 5 M26 16 C24 12 28 10 26 5"></path></svg></span><b>the kitchen lab</b><p>treating recipes like r&amp;d: dialling in lemon malai chicken or testing parle-g tiramisu ratios.</p></li>
+            <li style="--lc: var(--sky)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 22 L30 9 L52 22 Z"></path><path d="M14 22 V46 M24 22 V46 M36 22 V46 M46 22 V46"></path><path d="M7 50 H53"></path></svg></span><b>mythology &amp; history</b><p>epics, old empires, and the patterns humans keep repeating across centuries.</p></li>
+            <li style="--lc: var(--sun)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M20 54 L27 22 M40 54 L33 22"></path><path d="M30 52 V47 M30 40 V35 M30 29 V26"></path><path d="M3 30 L15 16 L24 26 L32 18 L42 28"></path><circle cx="49" cy="11" r="5"></circle></svg></span><b>road trips</b><p>always up for a long drive. ladakh in the thar is still the best one.</p></li>
+            <li style="--lc: var(--tang-soft)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="20" cy="38" r="13"></circle><path d="M20 31 L26.5 35.5 L24 43 L16 43 L13.5 35.5 Z"></path><path d="M40 52 V10"></path><path d="M40 10 H56 V26 H40"></path><path d="M48 10 V26 M40 18 H56"></path></svg></span><b>football &amp; f1</b><p>the newer sports i've gotten hooked on, on top of cricket.</p></li>
+            <li style="--lc: var(--mint-soft)"><span class="ic"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M13 10 C23 3 38 7 40 19 C42 30 34 38 24 38 C14 38 7 30 8 22 C8 16 10 12 13 10 Z"></path><path d="M24 38 L22 55"></path><circle cx="47" cy="45" r="7"></circle><circle cx="45" cy="43" r="1"></circle><circle cx="49.5" cy="46.5" r="1"></circle></svg></span><b>pickleball</b><p>i play it too. up for a duel?</p></li>
+          </ul>
+        </div>
       </div>
-      <ul class="likes">
-        <li class="like" style="--lc: var(--sun)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 24 C12 18 17 16 23 17 L37 17 C43 16 48 18 48 24 L51 37 C52 44 45 46 41 41 L38 36 L22 36 L19 41 C15 46 8 44 9 37 Z"></path><path d="M19 23 V31 M15 27 H23"></path><circle cx="39" cy="24" r="1.8"></circle><circle cx="43" cy="29" r="1.8"></circle></svg>
-          <b>fc / fifa, high line only</b><p>attacking football on xbox, usually fc barcelona.</p>
-        </li>
-        <li class="like" style="--lc: var(--tang-soft)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M18 36 C10 36 7 46 13 51 C19 56 31 55 35 48 C38 43 37 37 32 35 C34 29 29 25 24 27 C19 29 21 34 18 36 Z"></path><path d="M30 34 L50 12"></path><path d="M48 9 L54 5 L57 9 L52 14 Z"></path><circle cx="23" cy="43" r="3.5"></circle></svg>
-          <b>electric &amp; acoustic</b><p>i play electric and acoustic guitar, and i know a few good songs to jam.</p>
-        </li>
-        <li class="like" style="--lc: var(--mint-soft)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 50 L36 20 L42 24.5 L21 54 Z"></path><path d="M36 20 L41 12 L46 15.5 L42 24.5"></path><circle cx="47" cy="44" r="6"></circle><path d="M42.5 41 C45 43 46 46 45.5 49.5"></path></svg>
-          <b>cricket</b><p>always ready to debate a test match collapse or a questionable selection call.</p>
-        </li>
-        <li class="like" style="--lc: var(--sun-soft)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="24" cy="36" r="14"></circle><path d="M38 36 L56 34"></path><path d="M18 16 C16 12 20 10 18 5 M26 16 C24 12 28 10 26 5"></path></svg>
-          <b>the kitchen lab</b><p>treating recipes like r&amp;d: dialling in lemon malai chicken or testing parle-g tiramisu ratios.</p>
-        </li>
-        <li class="like" style="--lc: var(--sky)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 22 L30 9 L52 22 Z"></path><path d="M14 22 V46 M24 22 V46 M36 22 V46 M46 22 V46"></path><path d="M7 50 H53"></path></svg>
-          <b>mythology &amp; history</b><p>epics, old empires, and the patterns humans keep repeating across centuries.</p>
-        </li>
-        <li class="like" style="--lc: var(--sun)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M20 54 L27 22 M40 54 L33 22"></path><path d="M30 52 V47 M30 40 V35 M30 29 V26"></path><path d="M3 30 L15 16 L24 26 L32 18 L42 28"></path><circle cx="49" cy="11" r="5"></circle></svg>
-          <b>road trips</b><p>always up for a long drive. ladakh in the thar is still the best one.</p>
-        </li>
-        <li class="like" style="--lc: var(--tang-soft)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="20" cy="38" r="13"></circle><path d="M20 31 L26.5 35.5 L24 43 L16 43 L13.5 35.5 Z"></path><path d="M40 52 V10"></path><path d="M40 10 H56 V26 H40"></path><path d="M48 10 V26 M40 18 H56"></path></svg>
-          <b>football &amp; f1</b><p>the newer sports i've gotten hooked on, on top of cricket.</p>
-        </li>
-        <li class="like" style="--lc: var(--mint-soft)">
-          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M13 10 C23 3 38 7 40 19 C42 30 34 38 24 38 C14 38 7 30 8 22 C8 16 10 12 13 10 Z"></path><path d="M24 38 L22 55"></path><circle cx="47" cy="45" r="7"></circle><circle cx="45" cy="43" r="1"></circle><circle cx="49.5" cy="46.5" r="1"></circle></svg>
-          <b>pickleball</b><p>i play it too. up for a duel?</p>
-        </li>
-      </ul>
     </div>
   </section>
 
-  <!-- contact -->
-  <section class="sec" id="hi" aria-labelledby="hi-h" style="padding-bottom: 10px">
+  <!-- say hi -->
+  <section class="hi" id="hi" aria-labelledby="hi-h">
     <div class="wrap">
-      <div class="contact card" data-pop>
+      <div class="contact rv">
         <svg class="spark" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 2 C32 20 40 28 58 30 C40 32 32 40 30 58 C28 40 20 32 2 30 C20 28 28 20 30 2 Z"></path></svg>
-        <span class="kick">→ say hi</span>
+        <span class="eyebrow">→ say hi</span>
         <h2 id="hi-h">pull up a chair (or send a track)</h2>
         <p>happy to talk 0-to-1 products, consumer behaviour in india, data puzzles, music transitions, or whatever rabbit hole you're currently down.</p>
         <div class="mail-row">
           <span class="addr" id="addr">falaqchopra18@gmail.com</span>
-          <button class="copy" id="copy" type="button">copy email</button>
+          <button class="btn copy" id="copy" type="button">copy email</button>
         </div>
         <p class="copied" id="copied" aria-live="polite"></p>
         <div class="c-links">
-          <a href="https://www.linkedin.com/in/falaq-chopra/" target="_blank" rel="noopener">linkedin ↗</a>
-          <a href="https://github.com/falaq18/Claude-JobAI" target="_blank" rel="noopener">applypilot on github ↗</a>
+          <a href="https://www.linkedin.com/in/falaq-chopra/" target="_blank" rel="noopener">linkedin <span class="ext" aria-hidden="true"></span><span class="sr-only">(opens in a new tab)</span></a>
+          <a href="https://github.com/falaq18/Claude-JobAI" target="_blank" rel="noopener">applypilot on github <span class="ext" aria-hidden="true"></span><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
+        <div class="encore">
+          <p>that's the end of the setlist.</p>
+          <a class="btn encore-btn" id="encore" href="#top">encore <span class="arr" aria-hidden="true">↑</span></a>
         </div>
       </div>
     </div>
@@ -1189,173 +609,4 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class="wrap"><span>falaq chopra · gurgaon · 2026</span><span>sketched in code · built with curiosity &amp; too many open tabs</span></div>
 </footer>
 
-<script>
-(function () {
-  var reduce = false;
-  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-
-  /* stagger indexes for chained animations */
-  document.querySelectorAll('.chain, .ladder').forEach(function (g) {
-    Array.prototype.forEach.call(g.children, function (c, i) { c.style.setProperty('--i', i); });
-  });
-
-  /* count-up numbers (final values are already in the html) */
-  function countUp(el) {
-    if (reduce || el.dataset.done) return;
-    el.dataset.done = '1';
-    var to = parseFloat(el.getAttribute('data-count')), pre = el.getAttribute('data-pre') || '', suf = el.getAttribute('data-suf') || '';
-    var fin = el.textContent, t0 = null, dur = 1100;
-    function step(ts) {
-      if (t0 === null) t0 = ts;
-      var p = Math.min(1, (ts - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - p, 3)));
-      el.textContent = pre + (to >= 1000 ? v.toLocaleString('en-IN') : v) + suf;
-      if (p < 1) requestAnimationFrame(step); else el.textContent = fin;
-    }
-    requestAnimationFrame(step);
-  }
-
-  /* a little pop when things scroll in; they are visible either way */
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in');
-        if (e.target.hasAttribute('data-count')) countUp(e.target);
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('[data-pop], .ladder, .chain, [data-count]').forEach(function (el) { io.observe(el); });
-
-    /* highlight the nav link for the section on screen */
-    var links = {};
-    document.querySelectorAll('.links a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
-    var navIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        var a = links[e.target.id];
-        if (!a || !e.isIntersecting) return;
-        Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
-        a.setAttribute('aria-current', 'true');
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) navIO.observe(s); });
-  }
-
-  /* the falaq mixer */
-  var xf = document.getElementById('xf'), box = document.getElementById('mixbox');
-  var dA = document.getElementById('deckA'), dB = document.getElementById('deckB'), out = document.getElementById('mixout');
-  var mixes = [
-    [15, 'full analyst', 'sql, snowflake, longitudinal timelines and cohort logic. give me three messy healthcare databases and a quiet afternoon, and i\'ll find where the story breaks.'],
-    [40, 'mostly analyst', 'numbers tell you where people drop off, never why. a retention curve is just hundreds of human decisions stacked on top of each other.'],
-    [60, 'the mix', 'use data to spot where the system leaks. use human instinct to figure out what brings people back. then build the fix. that\'s the whole set.'],
-    [85, 'mostly operator', 'audience personas, community building with cn clan, and scaling cosa nostra live\'s average reach from 250k to 2.2m in four months.'],
-    [101, 'full operator', 'artists, sponsors, unit economics and crowds: 11 live shows on the ground and ₹38 lakh in revenue, run end to end.']
-  ];
-  function lights(id, n) {
-    var cells = document.querySelectorAll('#' + id + ' i');
-    for (var c = 0; c < cells.length; c++) cells[c].classList.toggle('lit', c < n);
-  }
-  var lastName = '';
-  function mix(v) {
-    box.style.setProperty('--m', v);
-    var a = (100 - v) / 100, b = v / 100;
-    dA.style.transform = 'scale(' + (0.94 + a * 0.1) + ') rotate(' + (-2 * a) + 'deg)';
-    dB.style.transform = 'scale(' + (0.94 + b * 0.1) + ') rotate(' + (2 * b) + 'deg)';
-    lights('mA', Math.round(a * 8));
-    lights('mB', Math.round(b * 8));
-    var m = mixes[mixes.length - 1];
-    for (var k = 0; k < mixes.length; k++) { if (v < mixes[k][0]) { m = mixes[k]; break; } }
-    if (m[1] !== lastName) {
-      lastName = m[1];
-      out.innerHTML = '';
-      var tag = document.createElement('b'); tag.textContent = m[1];
-      out.appendChild(tag);
-      out.appendChild(document.createTextNode(m[2]));
-      xf.setAttribute('aria-valuetext', m[1]);
-    }
-  }
-  if (xf) { xf.addEventListener('input', function () { mix(+xf.value); }); mix(+xf.value); }
-
-  /* brain: tabs in the browser window, synced with the list */
-  var btabs = Array.prototype.slice.call(document.querySelectorAll('.b-tabs [role="tab"]'));
-  var barts = Array.prototype.slice.call(document.querySelectorAll('.b-art'));
-  var blis = Array.prototype.slice.call(document.querySelectorAll('.blf li'));
-  var bcap = document.getElementById('bcap'), bview = document.getElementById('bview');
-  var bcaps = ['i start with people.', 'i notice, connect, then act.', 'i zoom out.', 'i build when something bugs me.', 'i try to break my own ideas first.'];
-  var bcur = 1, bauto = null;
-  function bshow(k, focus) {
-    bcur = k;
-    btabs.forEach(function (t) {
-      var on = +t.dataset.k === k;
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.tabIndex = on ? 0 : -1;
-      if (on && focus) t.focus();
-    });
-    barts.forEach(function (a) {
-      var on = +a.dataset.k === k;
-      if (on) a.removeAttribute('hidden'); else a.setAttribute('hidden', '');
-      a.classList.remove('on');
-      if (on) { void a.getBoundingClientRect(); a.classList.add('on'); }
-    });
-    blis.forEach(function (l) { l.classList.toggle('on', +l.dataset.k === k); });
-    bcap.textContent = bcaps[k - 1];
-    bview.setAttribute('aria-labelledby', 'bt' + k);
-  }
-  function bstop() { if (bauto) { clearInterval(bauto); bauto = null; } }
-  btabs.forEach(function (t) {
-    t.addEventListener('click', function () { bstop(); bshow(+t.dataset.k); });
-    t.addEventListener('keydown', function (e) {
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-      e.preventDefault(); bstop();
-      var n = bcur + (e.key === 'ArrowRight' ? 1 : -1);
-      if (n < 1) n = 5; if (n > 5) n = 1;
-      bshow(n, true);
-    });
-  });
-  blis.forEach(function (l) { l.addEventListener('mouseenter', function () { bstop(); bshow(+l.dataset.k); }); });
-  if (blis.length) blis[0].classList.add('on');
-  if (!reduce && 'IntersectionObserver' in window && bview) {
-    var bio = new IntersectionObserver(function (es) {
-      if (!es[0].isIntersecting) return;
-      bio.disconnect();
-      bauto = setInterval(function () { bshow(bcur % 5 + 1); }, 3200);
-    }, { threshold: 0.5 });
-    bio.observe(bview);
-  }
-
-  /* idea pressure test: one real question per phase */
-  var grill = document.querySelector('[data-grill]');
-  if (grill) {
-    var GQ = [
-      ['phase 1 · the guru test', '"do you personally face this problem?"', 'how badly does it frustrate you, on a scale of 1–10? give a specific example of the last time it bothered you.', 'scored in: hormozi test + the itch test'],
-      ['phase 2 · the founder test', '"if you could not make any money from this for 2 years but could keep building it, would you?"', 'why or why not?', 'scored in: the obsession test'],
-      ['phase 3 · the reality test', '"how will your first 100 customers find you?"', 'be specific. don\'t say "social media" or "word of mouth". tell me the actual channel, and the actual thing you\'d do in week one.', 'scored in: the distribution test']
-    ];
-    var gbtns = Array.prototype.slice.call(grill.querySelectorAll('[data-g]'));
-    var gq = grill.querySelector('.grill-q');
-    gbtns.forEach(function (b) {
-      b.addEventListener('click', function () {
-        var i = +b.dataset.g;
-        gbtns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-        gq.querySelector('.grill-k').textContent = GQ[i][0];
-        gq.querySelector('.grill-text').textContent = GQ[i][1];
-        gq.querySelector('.grill-sub').textContent = GQ[i][2];
-        gq.querySelector('.grill-feeds').textContent = GQ[i][3];
-        gq.classList.remove('swap'); void gq.offsetWidth; gq.classList.add('swap');
-      });
-    });
-  }
-
-  /* copy email */
-  var btn = document.getElementById('copy'), addr = document.getElementById('addr'), msg = document.getElementById('copied');
-  function selectAddr() {
-    try { var rg = document.createRange(); rg.selectNodeContents(addr); var s = window.getSelection(); s.removeAllRanges(); s.addRange(rg); } catch (e) {}
-  }
-  btn.addEventListener('click', function () {
-    var text = addr.textContent.trim();
-    try {
-      navigator.clipboard.writeText(text).then(function () { msg.textContent = 'copied. talk soon.'; },
-        function () { selectAddr(); msg.textContent = 'selected. press copy on your keyboard.'; });
-    } catch (e) { selectAddr(); msg.textContent = 'selected. press copy on your keyboard.'; }
-  });
-})();
-</script>
+<script src="js/site.js" defer></script>
